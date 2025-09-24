@@ -1,0 +1,27 @@
+# Netlify redirects file for CleanSure website
+# Place this file in your root directory as "_redirects" (no extension)
+
+# Force HTTPS (security & SEO boost)
+http://bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
+http://www.bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
+https://www.bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
+
+# SEO-friendly URL redirects for future content
+/inspection /contact 302
+/quote /contact 302
+/emergency /contact 302
+/service-areas / 302
+
+# Form submission success page
+/thank-you /contact 200
+
+# 404 page fallback
+/* /index.html 200
+
+# Headers for performance and security
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=31536000
