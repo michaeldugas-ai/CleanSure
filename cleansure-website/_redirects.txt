@@ -2,15 +2,16 @@
 # Place this file in your root directory as "_redirects" (no extension)
 
 # Force HTTPS (security & SEO boost)
-http://bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
-http://www.bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
-https://www.bedbugexterminator.service/* https://bedbugexterminator.service/:splat 301!
+http://bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
+http://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
+https://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
 
 # SEO-friendly URL redirects for future content
 /inspection /contact 302
 /quote /contact 302
 /emergency /contact 302
 /service-areas / 302
+/commercial-quote /commercial.html#contact 302
 
 # Form submission success page
 /thank-you /contact 200
