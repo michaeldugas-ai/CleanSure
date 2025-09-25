@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Direct favicon fix for homepage -->
+    <link rel="shortcut icon" type="image/png" href="./images/cleansure-favicon-transparent.png?home=1">
+    <link rel="icon" href="./images/cleansure-favicon-transparent.png?home=1" type="image/png">
+    
+    <title>CleanSure - Guaranteed Chemical-Free Bed Bug Extermination | Same-Day Service</title>
+    <meta name="description" content="CleanSure provides guaranteed, chemical-free bed bug extermination in one day. Safe for kids & pets. Discreet service with unmarked vehicles. Free inspection & quote. Call now!">
+    <meta name="keywords" content="bed bug extermination, chemical-free pest control, same day bed bug removal, safe bed bug treatment, guaranteed bed bug elimination">
+    
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination">
+    <meta property="og:description" content="Safe, effective bed bug removal in one day. Chemical-free treatment safe for families and pets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bedbugexterminator.service">
+    <meta property="og:image" content="https://bedbugexterminator.service/images/hero-bedroom-1200.jpg">
+    
+    <!-- Schema.org markup for local business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PestControlService",
+        "name": "CleanSure",
+        "description": "Guaranteed chemical-free bed bug extermination service",
+        "url": "https://bedbugexterminator.service",
+        "telephone": "(555) 123-4567",
+        "areaServed": "Your Service Area",
+        "serviceType": "Bed Bug Extermination",
+        "additionalType": "Chemical-Free Pest Control",
+        "image": "https://bedbugexterminator.service/images/cleansure-logo-200.webp"
+    }
+    </script>
+    
+    <!-- Preload critical images with fallbacks -->
+    <link rel="preload" as="image" href="./images/cleansure-logo-200.png" type="image/png">
+    
+    <!-- Fallback for browsers that don't support WebP -->
+    <script>
+        // Check WebP support and set appropriate image sources
+        function supportsWebP() {
+            return new Promise(resolve => {
+                const webP = new Image();
+                webP.onload = webP.onerror = function () {
+                    resolve(webP.height === 2);
+                };
+                webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+            });
+        }
+        
+        // Set image sources based on WebP support
+        supportsWebP().then(hasWebP => {
+            document.documentElement.setAttribute('data-webp-support', hasWebP);
+        });
+    </script>
+    
+    <!-- Google Analytics with enhanced ecommerce -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-4VM702HH2J', {
+            'custom_map': {
+                'custom_parameter_1': 'traffic_source',
+                'custom_parameter_2': 'lead_quality'
+            }
+        });
+        
+        // Track traffic source from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const trafficSource = urlParams.get('utm_source') || 
+                            urlParams.get('source') || 
+                            document.referrer || 
+                            'direct';
+        
+        gtag('event', 'page_view', {
+            'traffic_source': trafficSource,
+            'page_location': window.location.href
+        });
+    </script>
+    
+    <!-- Netlify Analytics (Free) -->
+    <script defer data-domain="bedbugexterminator.service" src="https://plausible.io/js/plausible.js"></script>
+    
+    <style>
+        /* Color Palette - CleanSure Brand Colors */
+        :root {
+            --cleansure-primary: #2d5016;      /* Dark Green */
+            --cleansure-secondary: #4a7c59;    /* Medium Green */
+            --cleansure-accent: #f59e0b;       /* Orange/Gold */
+            --cleansure-dark: #1f3a0f;         /* Darker Green */
+            --cleansure-light: #f0f9f4;        /* Light Green */
+            --cleansure-gray: #6b7280;         /* Text Gray */
+            --cleansure-light-gray: #f8fafc;   /* Background Gray */
+            --cleansure-white: #ffffff;        /* Pure White */
+            --cleansure-black: #1f2937;        /* Text Black */
+        }
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--cleansure-black);
+            font-weight: 400 !important;
+            font-size: 1.1rem !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--cleansure-primary);
+        }
+        
+        .phone-number {
+            background: var(--cleansure-primary);
+            color: var(--cleansure-white) !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .phone-number:hover {
+            background: var(--cleansure-dark) !important;
+            color: var(--cleansure-white) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            color: white;
+            padding: 10rem 0 5rem;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .guarantee-badge {
+            display: inline-block;
+            background: var(--cleansure-accent);
+            color: var(--cleansure-white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: var(--cleansure-accent);
+            color: var(--cleansure-white);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--cleansure-white);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border: 2px solid var(--cleansure-white);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--cleansure-white);
+            color: var(--cleansure-primary);
+        }
+        
+        /* Trust Indicators */
+        .trust-bar {
+            background: var(--cleansure-light-gray);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile: stack vertically */
+        @media (max-width: 768px) {
+            .trust-items {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--cleansure-primary);
+        }
+        
+        .trust-icon {
+            font-size: 1.5rem;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: var(--cleansure-white);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--cleansure-black);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--cleansure-gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f1f5f9;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #2d5016;
+        }
+        
+        .service-card p {
+            margin-bottom: 1.5rem;
+            color: #6b7280;
+        }
+        
+        .service-features {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .service-features li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            color: #374151;
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2d5016;
+            font-weight: bold;
+        }
+        
+        /* Why Choose Us - 3 columns on desktop */
+        .why-choose {
+            padding: 5rem 0;
+            background: var(--cleansure-light-gray);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        /* Force 3 columns on desktop */
+        @media (min-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cleansure-white);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            margin-bottom: 1rem;
+            color: var(--cleansure-primary);
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #2d5016;
+            color: white;
+            border-radius: 50%;
+            line-height: 60px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .process-step h3 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #2d5016;
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        
+        .contact-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .contact-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2d5016;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #2d5016;
+            color: white;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #1f3a0f;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #f59e0b;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #f59e0b;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                min-height: 60vh;
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid,
+            .features-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-items {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        /* Large screen optimizations */
+        @media (min-width: 1920px) {
+            .hero {
+                min-height: 100vh;
+            }
+            
+            .container {
+                max-width: 1400px;
+            }
+            
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.6rem;
+            }
+        }
+        
+        /* Ultra-wide screen support */
+        @media (min-width: 2560px) {
+            .hero-image {
+                object-position: center center;
+                min-height: 100vh;
+            }
+            
+            .container {
+                max-width: 1600px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: none;
+            margin-left: 10px;
+        }
+        
+        .loading.show {
+            display: inline-block;
+        }
+        
+        /* Emergency banner */
+        .emergency-banner {
+            background: #dc2626;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .emergency-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <!-- High-resolution logo -->
+                <img src="./images/cleansure-logo-400.png" 
+                     alt="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination" 
+                     class="logo"
+                     width="250" 
+                     height="60"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- Text fallback if image fails -->
+                <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
+                    CleanSure
+                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Extermination</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:2159064377" class="phone-number">📞 (215) 906-4377</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <!-- Single reliable hero image with fallback -->
+            <img src="./images/hero-bedroom-1200.jpg" 
+                 alt="Peaceful bedroom with clean white bedding - representing comfort after bed bug treatment"
+                 class="hero-image"
+                 width="1200" 
+                 height="675"
+                 loading="eager"
+                 onload="this.style.opacity='1';"
+                 onerror="console.log('Hero image failed to load'); this.style.backgroundImage='linear-gradient(135deg, #f8fafc 0%, #e5e7eb 100%)'; this.style.backgroundColor='#f8fafc'; this.alt='Clean, peaceful bedroom environment';">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="guarantee-badge">100% SATISFACTION GUARANTEED</div>
+                <h1>Sleep Peacefully Tonight</h1>
+                <p class="subtitle">Chemical-free bed bug extermination completed in one day. Safe for your family, pets, and peace of mind.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary" data-track="hero-primary-cta">Get Free Inspection</a>
+                    <a href="tel:2159064377" class="cta-secondary" data-track="hero-phone-cta">Call Now: (215) 906-4377</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <span class="trust-icon">🛡️</span>
+                    <span>100% Guaranteed</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🌿</span>
+                    <span>Chemical-Free</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">⚡</span>
+                    <span>Same-Day Service</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🤐</span>
+                    <span>100% Discreet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Complete Bed Bug Solution</h2>
+            <p class="section-subtitle">Everything you need to eliminate bed bugs and prevent future infestations</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Free Inspection & Quote</h3>
+                    <p>Our experts identify the extent of infestation and provide an accurate, upfront quote with no hidden fees.</p>
+                    <ul class="service-features">
+                        <li>Thorough property inspection</li>
+                        <li>Honest assessment</li>
+                        <li>No obligation quote</li>
+                        <li>Same-day availability</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Chemical-Free Treatment</h3>
+                    <p>Safe, effective heat treatment that eliminates bed bugs without harmful chemicals or residue.</p>
+                    <ul class="service-features">
+                        <li>No toxic chemicals</li>
+                        <li>Safe for kids & pets</li>
+                        <li>No preparation required</li>
+                        <li>One-day completion</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Prevention Education</h3>
+                    <p>Comprehensive consultation and materials to help prevent future infestations.</p>
+                    <ul class="service-features">
+                        <li>Prevention strategies</li>
+                        <li>Educational materials</li>
+                        <li>Follow-up support</li>
+                        <li>Peace of mind</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Families Choose CleanSure</h2>
+            <p class="section-subtitle">We understand the stress and trauma of bed bug infestations. Our service is designed for your comfort and confidence.</p>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Unmarked Vehicles</h3>
+                    <p>Complete discretion with unmarked vehicles to protect your privacy from neighbors and guests.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Same-Day Service</h3>
+                    <p>Emergency response available. Most treatments completed in one day so you can sleep peacefully tonight.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👶</div>
+                    <h3>Family & Pet Safe</h3>
+                    <p>No harsh chemicals or toxic residue. Safe for children, pets, and sensitive individuals.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>100% Guarantee</h3>
+                    <p>We stand behind our work with a comprehensive satisfaction guarantee and free follow-up if needed.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Upfront, honest pricing with no hidden fees. You'll know exactly what you're paying before we start.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully licensed, bonded, and insured professionals with years of bed bug elimination experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title">Our Simple 4-Step Process</h2>
+            <p class="section-subtitle">From initial contact to peaceful sleep, we make it easy</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Inspection</h3>
+                    <p>We arrive discretely in unmarked vehicles and conduct a thorough inspection to assess the situation and provide an accurate quote.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Treatment Plan</h3>
+                    <p>We explain our chemical-free heat treatment process and timeline. Most treatments are completed the same day.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Safe Elimination</h3>
+                    <p>Our trained professionals eliminate bed bugs using proven heat treatment methods that are 100% safe for your family and pets.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Prevention & Support</h3>
+                    <p>We provide education materials and ongoing support to help prevent future infestations and ensure your continued peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div>
+                    <h2>Get Your Free Inspection Today</h2>
+                    <p><strong>Don't let bed bugs rob you of another night's sleep.</strong> Our experts are standing by to help you reclaim your home and peace of mind.</p>
+                    
+                    <ul class="contact-features">
+                        <li>Free, no-obligation inspection and quote</li>
+                        <li>Same-day emergency service available</li>
+                        <li>100% chemical-free, family-safe treatment</li>
+                        <li>Completely discreet service</li>
+                        <li>Satisfaction guaranteed</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <p><strong>📞 Emergency Hotline: (215) 906-4377</strong></p>
+                        <p>📧 help@bedbugexterminator.services</p>
+                        <p>🕒 24/7 Emergency Response Available</p>
+                        <p>📍 Serving Philadelphia and Southeastern PA</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form name="residential-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" id="contactForm">
+                        <input type="hidden" name="form-name" value="residential-contact">
+                        <input type="hidden" name="form-type" value="residential">
+                        <input type="hidden" name="traffic_source" id="traffic_source" value="">
+                        <input type="hidden" name="page_url" id="page_url" value="">
+                        <input type="hidden" name="timestamp" id="timestamp" value="">
+                        <input type="hidden" name="user_agent" id="user_agent" value="">
+                        <div style="display: none;">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="property-type">Property Type</label>
+                            <select id="property-type" name="property-type">
+                                <option value="">Select Property Type</option>
+                                <option value="single-family-home">Single Family Home</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="condo">Condo/Townhouse</option>
+                                <option value="hotel">Hotel</option>
+                                <option value="office-building">Office Building</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency">How urgent is your situation?</label>
+                            <select id="urgency" name="urgency">
+                                <option value="">Select urgency level</option>
+                                <option value="emergency">Emergency - Need help today</option>
+                                <option value="urgent">Urgent - Within 2-3 days</option>
+                                <option value="soon">Soon - Within a week</option>
+                                <option value="planning">Just getting quotes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell us about your situation *</label>
+                            <textarea id="message" name="message" placeholder="Where have you seen bed bugs? How long have you noticed them? Any other details that might help us..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            Get Free Inspection
+                            <span class="loading">⏳</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CleanSure</h4>
+                    <p>Guaranteed chemical-free bed bug extermination. Safe, effective, discreet.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p><a href="#services">Residential Treatment</a></p>
+                    <p><a href="commercial.html">Commercial Services</a></p>
+                    <p><a href="#services">Free Inspection</a></p>
+                    <p><a href="resources.html">Bed Bug Resources</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:2159064377">(215) 906-4377</a></p>
+                    <p><a href="mailto:help@bedbugexterminator.services">help@bedbugexterminator.services</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Area</h4>
+                    <p>Philadelphia and Southeastern PA</p>
+                    <p>24/7 Emergency Service</p>
+                </div>
+            </div>
+            <p>&copy; 2025 CleanSure. All rights reserved. | Licensed & Insured</p>
+        </div>
+    </footer>
+
+    <!-- Floating Emergency Banner (appears at bottom when scrolling) -->
+    <div class="emergency-banner">
+        🚨 Bed Bug Emergency? Call Now for Same-Day Service: (215) 906-4377
+        <button class="close-banner" aria-label="Close emergency banner">&times;</button>
+    </div>
+
+    <script>
+        // Enhanced traffic source tracking with more detail
+        function getTrafficSource() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const utmSource = urlParams.get('utm_source');
+            const utmMedium = urlParams.get('utm_medium');
+            const utmCampaign = urlParams.get('utm_campaign');
+            const referrer = document.referrer ? new URL(document.referrer).hostname : null;
+            
+            // Build detailed source string
+            if (utmSource) {
+                let source = utmSource;
+                if (utmMedium) source += ` (${utmMedium})`;
+                if (utmCampaign) source += ` - ${utmCampaign}`;
+                return source;
+            }
+            
+            return referrer || 'direct';
+        }
+        
+        // Set enhanced form data
+        document.getElementById('traffic_source').value = getTrafficSource();
+        document.getElementById('page_url').value = window.location.href;
+        document.getElementById('timestamp').value = new Date().toISOString();
+        document.getElementById('user_agent').value = navigator.userAgent.substring(0, 100); // Truncated for storage
+        
+        // Lazy loading for images
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('.lazy-image');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        }
+        
+        // Initialize lazy loading
+        if ('IntersectionObserver' in window) {
+            lazyLoadImages();
+        } else {
+            // Fallback for older browsers
+            document.querySelectorAll('.lazy-image').forEach(img => {
+                img.classList.add('loaded');
+            });
+        }
+        
+        // Enhanced form submission tracking
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('.submit-btn');
+            const loading = this.querySelector('.loading');
+            
+            submitBtn.disabled = true;
+            loading.classList.add('show');
+            submitBtn.innerHTML = 'Sending... <span class="loading show">⏳</span>';
+            
+            // Comprehensive form data for tracking
+            const formData = new FormData(this);
+            const trackingData = {
+                'event_category': 'Lead Generation',
+                'event_label': 'Contact Form Submission',
+                'traffic_source': formData.get('traffic_source'),
+                'property_type': formData.get('property-type'),
+                'urgency': formData.get('urgency'),
+                'page_url': formData.get('page_url'),
+                'value': 1
+            };
+            
+            // Enhanced Google Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', trackingData);
+                
+                // Track lead quality scoring
+                let leadScore = 0;
+                if (formData.get('urgency') === 'emergency') leadScore += 10;
+                else if (formData.get('urgency') === 'urgent') leadScore += 7;
+                else if (formData.get('urgency') === 'soon') leadScore += 5;
+                
+                if (formData.get('property-type') === 'hotel' || formData.get('property-type') === 'office-building') leadScore += 5;
+                
+                gtag('event', 'lead_quality_score', {
+                    'event_category': 'Lead Scoring',
+                    'value': leadScore,
+                    'traffic_source': formData.get('traffic_source')
+                });
+            }
+        });
+        
+        // Track phone clicks with source attribution
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const location = this.closest('section')?.id || 'unknown';
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'Lead Generation',
+                        'event_label': `Phone Click - ${location}`,
+                        'traffic_source': getTrafficSource(),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Emergency banner functionality
+        function showEmergencyBanner() {
+            const banner = document.querySelector('.emergency-banner');
+            const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.scrollHeight;
+            const isAtBottom = scrollPosition + windowHeight >= documentHeight - 100;
+            
+            if (isAtBottom) {
+                banner.classList.add('show');
+            } else {
+                banner.classList.remove('show');
+            }
+        }
+        
+        // Show banner when scrolling near bottom
+        window.addEventListener('scroll', showEmergencyBanner);
+        
+        // Close banner functionality
+        document.querySelector('.close-banner')?.addEventListener('click', function() {
+            document.querySelector('.emergency-banner').style.display = 'none';
+        });
+        
+        // Enhanced CTA tracking with location context
+        document.querySelectorAll('[data-track]').forEach(button => {
+            button.addEventListener('click', function() {
+                const trackingType = this.getAttribute('data-track');
+                const section = this.closest('section')?.id || 'unknown';
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'cta_click', {
+                        'event_category': 'Lead Generation',
+                        'event_label': `${trackingType} - ${section}`,
+                        'traffic_source': getTrafficSource(),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Track navigation clicks
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'navigation_click', {
+                            'event_category': 'Navigation',
+                            'event_label': this.getAttribute('href'),
+                            'traffic_source': getTrafficSource()
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Advanced scroll depth tracking
+        let scrollMilestones = [25, 50, 75, 90, 100];
+        let scrollTracked = [];
+        
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            
+            scrollMilestones.forEach(milestone => {
+                if (scrollPercent >= milestone && !scrollTracked.includes(milestone)) {
+                    scrollTracked.push(milestone);
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll_depth', {
+                            'event_category': 'Engagement',
+                            'event_label': `${milestone}% Scroll Depth`,
+                            'traffic_source': getTrafficSource(),
+                            'value': milestone
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Track time on page with traffic source
+        let startTime = Date.now();
+        let timeTracked = [];
+        
+        setInterval(() => {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            [30, 60, 120, 300].forEach(milestone => {
+                if (timeOnPage >= milestone && !timeTracked.includes(milestone)) {
+                    timeTracked.push(milestone);
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'time_on_page', {
+                            'event_category': 'Engagement',
+                            'event_label': `${milestone} seconds`,
+                            'traffic_source': getTrafficSource(),
+                            'value': milestone
+                        });
+                    }
+                }
+            });
+        }, 5000);
+        
+        // Track exit intent (when user moves cursor to top of page)
+        let exitIntentTracked = false;
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitIntentTracked) {
+                exitIntentTracked = true;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'exit_intent', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Mouse Leave',
+                        'traffic_source': getTrafficSource()
+                    });
+                }
+            }
+        });
+        
+        // Track service area interactions
+        document.querySelectorAll('.service-card, .feature, .process-step').forEach(element => {
+            element.addEventListener('click', function() {
+                const title = this.querySelector('h3')?.textContent || 'unknown';
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'content_interaction', {
+                        'event_category': 'Content Engagement',
+                        'event_label': title,
+                        'traffic_source': getTrafficSource()
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
