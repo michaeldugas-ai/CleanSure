@@ -15,100 +15,54 @@
     <!-- Open Graph for social media -->
     <meta property="og:title" content="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination">
     <meta property="og:description" content="Safe, effective bed bug removal in one day. Chemical-free treatment safe for families and pets.">
+    <meta property="og:url" content="https://bedbugexterminator.services">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bedbugexterminator.service">
-    <meta property="og:image" content="https://bedbugexterminator.service/images/hero-bedroom-1200.jpg">
     
-    <!-- Schema.org markup for local business -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "PestControlService",
-        "name": "CleanSure",
-        "description": "Guaranteed chemical-free bed bug extermination service",
-        "url": "https://bedbugexterminator.service",
-        "telephone": "(555) 123-4567",
-        "areaServed": "Your Service Area",
-        "serviceType": "Bed Bug Extermination",
-        "additionalType": "Chemical-Free Pest Control",
-        "image": "https://bedbugexterminator.service/images/cleansure-logo-200.webp"
-    }
-    </script>
-    
-    <!-- Preload critical images with fallbacks -->
-    <link rel="preload" as="image" href="./images/cleansure-logo-200.png" type="image/png">
-    
-    <!-- Fallback for browsers that don't support WebP -->
-    <script>
-        // Check WebP support and set appropriate image sources
-        function supportsWebP() {
-            return new Promise(resolve => {
-                const webP = new Image();
-                webP.onload = webP.onerror = function () {
-                    resolve(webP.height === 2);
-                };
-                webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-            });
-        }
-        
-        // Set image sources based on WebP support
-        supportsWebP().then(hasWebP => {
-            document.documentElement.setAttribute('data-webp-support', hasWebP);
-        });
-    </script>
-    
-    <!-- Google Analytics with enhanced ecommerce -->
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        
-        gtag('config', 'G-4VM702HH2J', {
-            'custom_map': {
-                'custom_parameter_1': 'traffic_source',
-                'custom_parameter_2': 'lead_quality'
-            }
-        });
-        
-        // Track traffic source from URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const trafficSource = urlParams.get('utm_source') || 
-                            urlParams.get('source') || 
-                            document.referrer || 
-                            'direct';
-        
-        gtag('event', 'page_view', {
-            'traffic_source': trafficSource,
-            'page_location': window.location.href
-        });
+        gtag('config', 'G-4VM702HH2J');
     </script>
     
-    <!-- Netlify Analytics (Free) -->
-    <script defer data-domain="bedbugexterminator.service" src="https://plausible.io/js/plausible.js"></script>
-    
     <style>
-        /* Color Palette - CleanSure Brand Colors */
         :root {
-            --cleansure-primary: #2d5016;      /* Dark Green */
-            --cleansure-secondary: #4a7c59;    /* Medium Green */
-            --cleansure-accent: #f59e0b;       /* Orange/Gold */
-            --cleansure-dark: #1f3a0f;         /* Darker Green */
-            --cleansure-light: #f0f9f4;        /* Light Green */
-            --cleansure-gray: #6b7280;         /* Text Gray */
-            --cleansure-light-gray: #f8fafc;   /* Background Gray */
-            --cleansure-white: #ffffff;        /* Pure White */
-            --cleansure-black: #1f2937;        /* Text Black */
+            --cleansure-primary: #2d5016;
+            --cleansure-secondary: #4a7c59;
+            --cleansure-accent: #f59e0b;
+            --cleansure-dark: #1f3a0f;
+            --cleansure-light: #f0f9f4;
+            --cleansure-gray: #6b7280;
+            --cleansure-light-gray: #f8fafc;
+            --cleansure-white: #ffffff;
+            --cleansure-black: #1f2937;
         }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        /* STANDARDIZED FONT SYSTEM - Applied universally */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--cleansure-black);
+        }
+        
+        /* Typography hierarchy with consistent font family */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        p, li, span, div {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .container {
@@ -131,7 +85,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
+        }
+        
+        .logo-container {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+            max-width: 250px;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
         
         .nav-links {
@@ -144,9 +112,9 @@
         .nav-links a {
             text-decoration: none;
             color: var(--cleansure-black);
-            font-weight: 400 !important;
-            font-size: 1.1rem !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             transition: color 0.3s;
         }
         
@@ -161,6 +129,7 @@
             border-radius: 5px;
             font-weight: bold;
             font-size: 1.1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .phone-number:hover {
@@ -217,6 +186,7 @@
             margin-bottom: 1rem;
             font-weight: 700;
             line-height: 1.2;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .hero .subtitle {
@@ -226,6 +196,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .guarantee-badge {
@@ -236,7 +207,9 @@
             border-radius: 50px;
             font-weight: bold;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .cta-buttons {
@@ -246,36 +219,31 @@
             flex-wrap: wrap;
         }
         
-        .cta-primary {
+        .cta-button {
             display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .cta-primary {
             background: var(--cleansure-accent);
             color: var(--cleansure-white);
-            padding: 1.2rem 2.5rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
         .cta-primary:hover {
-            background: #d97706;
+            background: #e97600;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
         
         .cta-secondary {
-            display: inline-block;
             background: transparent;
             color: var(--cleansure-white);
-            padding: 1.2rem 2.5rem;
-            text-decoration: none;
             border: 2px solid var(--cleansure-white);
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
         }
         
         .cta-secondary:hover {
@@ -283,46 +251,47 @@
             color: var(--cleansure-primary);
         }
         
-        /* Trust Indicators */
-        .trust-bar {
-            background: var(--cleansure-light-gray);
-            padding: 2rem 0;
-            text-align: center;
+        /* Trust Section */
+        .trust {
+            background: var(--cleansure-light);
+            padding: 3rem 0;
         }
         
         .trust-items {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem 3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Mobile: stack vertically */
-        @media (max-width: 768px) {
-            .trust-items {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
         }
         
         .trust-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            color: var(--cleansure-primary);
-            font-size: 1.1rem; /* Updated: Made trust item text size match nav links */
+            background: var(--cleansure-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         
         .trust-icon {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .trust-item h4 {
+            color: var(--cleansure-primary);
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .trust-item p {
+            color: var(--cleansure-gray);
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Services Section */
         .services {
-            padding: 3rem 0; /* Updated: Reduced top padding to match bottom */
+            padding: 3rem 0;
             background: var(--cleansure-white);
         }
         
@@ -331,6 +300,7 @@
             font-size: 2.8rem;
             margin-bottom: 1rem;
             color: var(--cleansure-black);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .section-subtitle {
@@ -341,6 +311,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .services-grid {
@@ -373,11 +344,13 @@
             font-size: 1.6rem;
             margin-bottom: 1rem;
             color: #2d5016;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .service-card p {
             margin-bottom: 1.5rem;
             color: #6b7280;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .service-features {
@@ -390,6 +363,7 @@
             position: relative;
             padding-left: 1.5rem;
             color: #374151;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .service-features li:before {
@@ -400,9 +374,9 @@
             font-weight: bold;
         }
         
-        /* Why Choose Us - 3 columns on desktop */
+        /* Why Choose Us */
         .why-choose {
-            padding: 3rem 0; /* Updated: Reduced top padding to match bottom */
+            padding: 3rem 0;
             background: var(--cleansure-light-gray);
         }
         
@@ -410,38 +384,81 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        /* Force 3 columns on desktop */
-        @media (min-width: 992px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
         
         .feature {
-            text-align: center;
-            padding: 2rem;
             background: var(--cleansure-white);
+            padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
         }
         
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+            display: block;
         }
         
         .feature h3 {
-            margin-bottom: 1rem;
             color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .feature p {
+            color: var(--cleansure-gray);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* NEW: CTA Section after Why Choose Us */
+        .mid-page-cta {
+            background: var(--cleansure-primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .mid-page-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .mid-page-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .mid-page-cta .cta-button {
+            background: var(--cleansure-accent);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .mid-page-cta .cta-button:hover {
+            background: #e97600;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
         }
         
         /* Process Section */
         .process {
-            padding: 3rem 0; /* Updated: Reduced top padding to match bottom */
-            background: white;
+            padding: 5rem 0;
+            background: var(--cleansure-white);
         }
         
         .process-steps {
@@ -451,62 +468,74 @@
             margin-top: 3rem;
         }
         
-        .process-step {
+        .step {
             text-align: center;
-            position: relative;
+            padding: 2rem;
         }
         
         .step-number {
-            display: inline-block;
+            background: var(--cleansure-primary);
+            color: var(--cleansure-white);
             width: 60px;
             height: 60px;
-            background: #2d5016;
-            color: white;
             border-radius: 50%;
-            line-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.5rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .process-step h3 {
+        .step h4 {
+            color: var(--cleansure-primary);
             margin-bottom: 1rem;
-            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .step p {
+            color: var(--cleansure-gray);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Contact Section */
         .contact {
             padding: 5rem 0;
-            background: #2d5016;
-            color: white;
+            background: linear-gradient(135deg, var(--cleansure-primary), var(--cleansure-dark));
+            color: var(--cleansure-white);
         }
         
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: start;
+            align-items: center;
         }
         
-        .contact h2 {
+        .contact-info h2 {
             font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .contact-info {
+        .contact-info p {
             font-size: 1.1rem;
-            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .contact-features {
             list-style: none;
-            margin: 2rem 0;
+            margin-bottom: 2rem;
         }
         
         .contact-features li {
             padding: 0.5rem 0;
             position: relative;
             padding-left: 2rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .contact-features li:before {
@@ -534,6 +563,7 @@
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: #374151;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .form-group input,
@@ -545,6 +575,7 @@
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .form-group input:focus,
@@ -570,6 +601,7 @@
             cursor: pointer;
             transition: background 0.3s;
             width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .submit-btn:hover {
@@ -594,15 +626,56 @@
         .footer-section h4 {
             margin-bottom: 1rem;
             color: #f59e0b;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .footer-section p, .footer-section a {
             color: #d1d5db;
             text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .footer-section a:hover {
             color: #f59e0b;
+        }
+        
+        /* Emergency banner */
+        .emergency-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #dc2626;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            z-index: 1001;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .emergency-banner.show {
+            transform: translateY(0);
+        }
+        
+        .emergency-banner a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+        
+        .close-banner {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
         /* Mobile Responsive */
@@ -645,66 +718,9 @@
             }
         }
         
-        /* Large screen optimizations */
-        @media (min-width: 1920px) {
-            .hero {
-                min-height: 100vh;
-            }
-            
-            .container {
-                max-width: 1400px;
-            }
-            
-            .hero h1 {
-                font-size: 4rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.6rem;
-            }
-        }
-        
-        /* Ultra-wide screen support */
-        @media (min-width: 2560px) {
-            .hero-image {
-                object-position: center center;
-                min-height: 100vh;
-            }
-            
-            .container {
-                max-width: 1600px;
-            }
-        }
-        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
-        }
-        
-        /* Loading animation */
-        .loading {
-            display: none;
-            margin-left: 10px;
-        }
-        
-        .loading.show {
-            display: inline-block;
-        }
-        
-        /* Emergency banner */
-        .emergency-banner {
-            background: #dc2626;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-            position: relative;
-            z-index: 1001;
-        }
-        
-        .emergency-banner a {
-            color: white;
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -754,35 +770,39 @@
         <div class="container">
             <div class="hero-content">
                 <div class="guarantee-badge">100% SATISFACTION GUARANTEED</div>
-                <h1>Sleep Peacefully Tonight</h1>
-                <p class="subtitle">Chemical-free bed bug extermination completed in one day. Safe for your family, pets, and peace of mind.</p>
+                <h1>Sleep Peacefully Tonight<br>Chemical-free bed bug extermination, guaranteed</h1>
+                <p class="subtitle">Same-day elimination of all bed bugs using safe, eco-friendly methods. No harmful chemicals, no repeat treatments needed.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="cta-primary" data-track="hero-primary-cta">Get Free Inspection</a>
-                    <a href="tel:2159064377" class="cta-secondary" data-track="hero-phone-cta">Call Now: (215) 906-4377</a>
+                    <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
+                    <a href="#contact" class="cta-button cta-secondary">Get Free Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar">
+    <!-- Trust Section -->
+    <section class="trust">
         <div class="container">
             <div class="trust-items">
                 <div class="trust-item">
                     <span class="trust-icon">🛡️</span>
-                    <span>100% Guaranteed</span>
+                    <h4>Licensed & Insured</h4>
+                    <p>Fully licensed exterminators with comprehensive insurance coverage</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">🌿</span>
-                    <span>Chemical-Free</span>
+                    <span class="trust-icon">🌱</span>
+                    <h4>100% Chemical-Free</h4>
+                    <p>Safe heat treatment that eliminates bed bugs without toxic chemicals</p>
                 </div>
                 <div class="trust-item">
                     <span class="trust-icon">⚡</span>
-                    <span>Same-Day Service</span>
+                    <h4>Same-Day Service</h4>
+                    <p>Emergency response available with most treatments completed in one day</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">🤐</span>
-                    <span>100% Discreet</span>
+                    <span class="trust-icon">🚗</span>
+                    <h4>Discreet Service</h4>
+                    <p>Unmarked vehicles and confidential treatment to protect your privacy</p>
                 </div>
             </div>
         </div>
@@ -791,29 +811,29 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Complete Bed Bug Solution</h2>
-            <p class="section-subtitle">Everything you need to eliminate bed bugs and prevent future infestations</p>
+            <h2 class="section-title">Complete Bed Bug Solutions</h2>
+            <p class="section-subtitle">Professional, chemical-free bed bug extermination using proven heat treatment technology.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Free Inspection & Quote</h3>
-                    <p>Our experts identify the extent of infestation and provide an accurate, upfront quote with no hidden fees.</p>
-                    <ul class="service-features">
-                        <li>Thorough property inspection</li>
-                        <li>Honest assessment</li>
-                        <li>No obligation quote</li>
-                        <li>Same-day availability</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Chemical-Free Treatment</h3>
-                    <p>Safe, effective heat treatment that eliminates bed bugs without harmful chemicals or residue.</p>
+                    <div class="service-icon">🔥</div>
+                    <h3>Heat Treatment</h3>
+                    <p>Advanced thermal remediation that eliminates bed bugs in all life stages without harmful chemicals or residue.</p>
                     <ul class="service-features">
                         <li>No toxic chemicals</li>
                         <li>Safe for kids & pets</li>
                         <li>No preparation required</li>
                         <li>One-day completion</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Free Inspection</h3>
+                    <p>Thorough assessment of your property with honest recommendations and transparent pricing.</p>
+                    <ul class="service-features">
+                        <li>Professional evaluation</li>
+                        <li>Detailed treatment plan</li>
+                        <li>Upfront pricing</li>
+                        <li>No hidden fees</li>
                     </ul>
                 </div>
                 <div class="service-card">
@@ -860,42 +880,45 @@
                 <div class="feature">
                     <div class="feature-icon">💰</div>
                     <h3>Transparent Pricing</h3>
-                    <p>Upfront, honest pricing with no hidden fees. You'll know exactly what you're paying before we start.</p>
+                    <p>Upfront, honest pricing with no hidden fees. What we quote is what you pay.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🏆</div>
-                    <h3>Licensed & Insured</h3>
-                    <p>Fully licensed, bonded, and insured professionals with years of bed bug elimination experience.</p>
+                    <h3>Proven Results</h3>
+                    <p>Years of experience with thousands of successful treatments using advanced heat technology.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- NEW: Mid-Page CTA Section -->
+    <section class="mid-page-cta">
+        <div class="container">
+            <h3>Ready to Sleep Peacefully Again?</h3>
+            <p>Don't let bed bugs disrupt another night. Get same-day elimination with our chemical-free treatment.</p>
+            <a href="tel:2159064377" class="cta-button">📞 Call Now: (215) 906-4377</a>
         </div>
     </section>
 
     <!-- Process Section -->
     <section id="process" class="process">
         <div class="container">
-            <h2 class="section-title">Our Simple 4-Step Process</h2>
-            <p class="section-subtitle">From initial contact to peaceful sleep, we make it easy</p>
+            <h2 class="section-title">Our Simple Process</h2>
             <div class="process-steps">
-                <div class="process-step">
+                <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Free Inspection</h3>
-                    <p>We arrive discretely in unmarked vehicles and conduct a thorough inspection to assess the situation and provide an accurate quote.</p>
+                    <h4>Free Inspection</h4>
+                    <p>We inspect your property thoroughly to assess the extent of the infestation and create a treatment plan.</p>
                 </div>
-                <div class="process-step">
+                <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Treatment Plan</h3>
-                    <p>We explain our chemical-free heat treatment process and timeline. Most treatments are completed the same day.</p>
+                    <h4>Heat Treatment</h4>
+                    <p>We use advanced heat technology to eliminate bed bugs in all life stages safely and effectively.</p>
                 </div>
-                <div class="process-step">
+                <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Safe Elimination</h3>
-                    <p>Our trained professionals eliminate bed bugs using proven heat treatment methods that are 100% safe for your family and pets.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Prevention & Support</h3>
-                    <p>We provide education materials and ongoing support to help prevent future infestations and ensure your continued peace of mind.</p>
+                    <h4>Verification</h4>
+                    <p>We verify complete elimination and provide you with prevention education and follow-up support.</p>
                 </div>
             </div>
         </div>
@@ -905,86 +928,52 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <div>
+                <div class="contact-info">
                     <h2>Get Your Free Inspection Today</h2>
-                    <p><strong>Don't let bed bugs rob you of another night's sleep.</strong> Our experts are standing by to help you reclaim your home and peace of mind.</p>
-                    
+                    <p>Don't wait for the problem to get worse. Our expert team is ready to eliminate your bed bug problem safely and effectively.</p>
                     <ul class="contact-features">
-                        <li>Free, no-obligation inspection and quote</li>
-                        <li>Same-day emergency service available</li>
-                        <li>100% chemical-free, family-safe treatment</li>
-                        <li>Completely discreet service</li>
+                        <li>Same-day service available</li>
+                        <li>100% chemical-free treatment</li>
+                        <li>Licensed and insured technicians</li>
                         <li>Satisfaction guaranteed</li>
+                        <li>Unmarked vehicles for privacy</li>
                     </ul>
-                    
-                    <div class="contact-info">
-                        <p><strong>📞 Emergency Hotline: (215) 906-4377</strong></p>
-                        <p>📧 help@bedbugexterminator.services</p>
-                        <p>🕒 24/7 Emergency Response Available</p>
-                        <p>📍 Serving Philadelphia and Southeastern PA</p>
+                    <div class="cta-buttons">
+                        <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
-                    <form name="residential-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" id="contactForm">
-                        <input type="hidden" name="form-name" value="residential-contact">
-                        <input type="hidden" name="form-type" value="residential">
-                        <input type="hidden" name="traffic_source" id="traffic_source" value="">
-                        <input type="hidden" name="page_url" id="page_url" value="">
-                        <input type="hidden" name="timestamp" id="timestamp" value="">
-                        <input type="hidden" name="user_agent" id="user_agent" value="">
-                        <div style="display: none;">
-                            <label>Don't fill this out: <input name="bot-field"></label>
-                        </div>
-                        
+                    <form action="#" method="POST" data-netlify="true" name="contact">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
+                            <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="phone">Phone Number *</label>
+                            <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
+                            <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="property-type">Property Type</label>
-                            <select id="property-type" name="property-type">
-                                <option value="">Select Property Type</option>
-                                <option value="single-family-home">Single Family Home</option>
-                                <option value="apartment">Apartment</option>
-                                <option value="condo">Condo/Townhouse</option>
-                                <option value="hotel">Hotel</option>
-                                <option value="office-building">Office Building</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label for="address">Property Address</label>
+                            <input type="text" id="address" name="address" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="urgency">How urgent is your situation?</label>
-                            <select id="urgency" name="urgency">
+                            <select id="urgency" name="urgency" required>
                                 <option value="">Select urgency level</option>
-                                <option value="emergency">Emergency - Need help today</option>
+                                <option value="emergency">Emergency - Need service today</option>
                                 <option value="urgent">Urgent - Within 2-3 days</option>
-                                <option value="soon">Soon - Within a week</option>
-                                <option value="planning">Just getting quotes</option>
+                                <option value="scheduled">Can schedule within a week</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="message">Tell us about your situation *</label>
-                            <textarea id="message" name="message" placeholder="Where have you seen bed bugs? How long have you noticed them? Any other details that might help us..." required></textarea>
+                            <label for="message">Tell us about your bed bug problem</label>
+                            <textarea id="message" name="message" placeholder="When did you first notice bed bugs? Where have you seen them? Any bites or other symptoms?"></textarea>
                         </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            Get Free Inspection
-                            <span class="loading">⏳</span>
-                        </button>
+                        <button type="submit" class="submit-btn">Get Free Inspection</button>
                     </form>
                 </div>
             </div>
@@ -997,147 +986,36 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>CleanSure</h4>
-                    <p>Guaranteed chemical-free bed bug extermination. Safe, effective, discreet.</p>
+                    <p>Chemical-free bed bug extermination specialists serving the Greater Philadelphia area.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
-                    <p><a href="#services">Residential Treatment</a></p>
-                    <p><a href="commercial.html">Commercial Services</a></p>
+                    <p><a href="#services">Heat Treatment</a></p>
                     <p><a href="#services">Free Inspection</a></p>
-                    <p><a href="resources.html">Bed Bug Resources</a></p>
+                    <p><a href="commercial.html">Commercial Services</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p><a href="tel:2159064377">(215) 906-4377</a></p>
-                    <p><a href="mailto:help@bedbugexterminator.services">help@bedbugexterminator.services</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Service Area</h4>
-                    <p>Philadelphia and Southeastern PA</p>
-                    <p>24/7 Emergency Service</p>
+                    <p>📞 (215) 906-4377</p>
+                    <p>📧 info@bedbugexterminator.services</p>
+                    <p>🏠 Greater Philadelphia Area</p>
                 </div>
             </div>
-            <p>&copy; 2025 CleanSure. All rights reserved. | Licensed & Insured</p>
+            <p>&copy; 2025 CleanSure. All rights reserved. Licensed and insured bed bug extermination services.</p>
         </div>
     </footer>
 
-    <!-- Floating Emergency Banner (appears at bottom when scrolling) -->
-    <div class="emergency-banner">
-        🚨 Bed Bug Emergency? Call Now for Same-Day Service: (215) 906-4377
-        <button class="close-banner" aria-label="Close emergency banner">&times;</button>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner" id="emergencyBanner">
+        🚨 EMERGENCY BED BUG PROBLEM? Get same-day service!
+        <a href="tel:2159064377">Call (215) 906-4377 now</a>
+        <button class="close-banner" onclick="closeEmergencyBanner()">×</button>
     </div>
 
     <script>
-        // Enhanced traffic source tracking with more detail
-        function getTrafficSource() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const utmSource = urlParams.get('utm_source');
-            const utmMedium = urlParams.get('utm_medium');
-            const utmCampaign = urlParams.get('utm_campaign');
-            const referrer = document.referrer ? new URL(document.referrer).hostname : null;
-            
-            // Build detailed source string
-            if (utmSource) {
-                let source = utmSource;
-                if (utmMedium) source += ` (${utmMedium})`;
-                if (utmCampaign) source += ` - ${utmCampaign}`;
-                return source;
-            }
-            
-            return referrer || 'direct';
-        }
-        
-        // Set enhanced form data
-        document.getElementById('traffic_source').value = getTrafficSource();
-        document.getElementById('page_url').value = window.location.href;
-        document.getElementById('timestamp').value = new Date().toISOString();
-        document.getElementById('user_agent').value = navigator.userAgent.substring(0, 100); // Truncated for storage
-        
-        // Lazy loading for images
-        function lazyLoadImages() {
-            const images = document.querySelectorAll('.lazy-image');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(img => imageObserver.observe(img));
-        }
-        
-        // Initialize lazy loading
-        if ('IntersectionObserver' in window) {
-            lazyLoadImages();
-        } else {
-            // Fallback for older browsers
-            document.querySelectorAll('.lazy-image').forEach(img => {
-                img.classList.add('loaded');
-            });
-        }
-        
-        // Enhanced form submission tracking
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            const submitBtn = this.querySelector('.submit-btn');
-            const loading = this.querySelector('.loading');
-            
-            submitBtn.disabled = true;
-            loading.classList.add('show');
-            submitBtn.innerHTML = 'Sending... <span class="loading show">⏳</span>';
-            
-            // Comprehensive form data for tracking
-            const formData = new FormData(this);
-            const trackingData = {
-                'event_category': 'Lead Generation',
-                'event_label': 'Contact Form Submission',
-                'traffic_source': formData.get('traffic_source'),
-                'property_type': formData.get('property-type'),
-                'urgency': formData.get('urgency'),
-                'page_url': formData.get('page_url'),
-                'value': 1
-            };
-            
-            // Enhanced Google Analytics tracking
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submit', trackingData);
-                
-                // Track lead quality scoring
-                let leadScore = 0;
-                if (formData.get('urgency') === 'emergency') leadScore += 10;
-                else if (formData.get('urgency') === 'urgent') leadScore += 7;
-                else if (formData.get('urgency') === 'soon') leadScore += 5;
-                
-                if (formData.get('property-type') === 'hotel' || formData.get('property-type') === 'office-building') leadScore += 5;
-                
-                gtag('event', 'lead_quality_score', {
-                    'event_category': 'Lead Scoring',
-                    'value': leadScore,
-                    'traffic_source': formData.get('traffic_source')
-                });
-            }
-        });
-        
-        // Track phone clicks with source attribution
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function() {
-                const location = this.closest('section')?.id || 'unknown';
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'Lead Generation',
-                        'event_label': `Phone Click - ${location}`,
-                        'traffic_source': getTrafficSource(),
-                        'value': 1
-                    });
-                }
-            });
-        });
-        
         // Emergency banner functionality
         function showEmergencyBanner() {
-            const banner = document.querySelector('.emergency-banner');
+            const banner = document.getElementById('emergencyBanner');
             const scrollPosition = window.pageYOffset;
             const windowHeight = window.innerHeight;
             const documentHeight = document.body.scrollHeight;
@@ -1149,32 +1027,29 @@
                 banner.classList.remove('show');
             }
         }
-        
+
+        function closeEmergencyBanner() {
+            document.getElementById('emergencyBanner').style.display = 'none';
+        }
+
         // Show banner when scrolling near bottom
         window.addEventListener('scroll', showEmergencyBanner);
-        
-        // Close banner functionality
-        document.querySelector('.close-banner')?.addEventListener('click', function() {
-            document.querySelector('.emergency-banner').style.display = 'none';
-        });
-        
-        // Enhanced CTA tracking with location context
-        document.querySelectorAll('[data-track]').forEach(button => {
-            button.addEventListener('click', function() {
-                const trackingType = this.getAttribute('data-track');
-                const section = this.closest('section')?.id || 'unknown';
+
+        // Enhanced tracking
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const location = this.closest('section')?.id || 'unknown';
                 
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'cta_click', {
+                    gtag('event', 'phone_call', {
                         'event_category': 'Lead Generation',
-                        'event_label': `${trackingType} - ${section}`,
-                        'traffic_source': getTrafficSource(),
+                        'event_label': `Phone Click - ${location}`,
                         'value': 1
                     });
                 }
             });
         });
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1184,87 +1059,6 @@
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
-                    });
-                    
-                    // Track navigation clicks
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'navigation_click', {
-                            'event_category': 'Navigation',
-                            'event_label': this.getAttribute('href'),
-                            'traffic_source': getTrafficSource()
-                        });
-                    }
-                }
-            });
-        });
-        
-        // Advanced scroll depth tracking
-        let scrollMilestones = [25, 50, 75, 90, 100];
-        let scrollTracked = [];
-        
-        window.addEventListener('scroll', function() {
-            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-            
-            scrollMilestones.forEach(milestone => {
-                if (scrollPercent >= milestone && !scrollTracked.includes(milestone)) {
-                    scrollTracked.push(milestone);
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'scroll_depth', {
-                            'event_category': 'Engagement',
-                            'event_label': `${milestone}% Scroll Depth`,
-                            'traffic_source': getTrafficSource(),
-                            'value': milestone
-                        });
-                    }
-                }
-            });
-        });
-        
-        // Track time on page with traffic source
-        let startTime = Date.now();
-        let timeTracked = [];
-        
-        setInterval(() => {
-            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-            [30, 60, 120, 300].forEach(milestone => {
-                if (timeOnPage >= milestone && !timeTracked.includes(milestone)) {
-                    timeTracked.push(milestone);
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'time_on_page', {
-                            'event_category': 'Engagement',
-                            'event_label': `${milestone} seconds`,
-                            'traffic_source': getTrafficSource(),
-                            'value': milestone
-                        });
-                    }
-                }
-            });
-        }, 5000);
-        
-        // Track exit intent (when user moves cursor to top of page)
-        let exitIntentTracked = false;
-        document.addEventListener('mouseleave', function(e) {
-            if (e.clientY <= 0 && !exitIntentTracked) {
-                exitIntentTracked = true;
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'exit_intent', {
-                        'event_category': 'Engagement',
-                        'event_label': 'Mouse Leave',
-                        'traffic_source': getTrafficSource()
-                    });
-                }
-            }
-        });
-        
-        // Track service area interactions
-        document.querySelectorAll('.service-card, .feature, .process-step').forEach(element => {
-            element.addEventListener('click', function() {
-                const title = this.querySelector('h3')?.textContent || 'unknown';
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'content_interaction', {
-                        'event_category': 'Content Engagement',
-                        'event_label': title,
-                        'traffic_source': getTrafficSource()
                     });
                 }
             });

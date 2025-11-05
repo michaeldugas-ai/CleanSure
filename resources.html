@@ -11,13 +11,11 @@
     <meta property="og:description" content="Expert bed bug resources, prevention tips, and identification guides.">
     <meta property="og:url" content="https://bedbugexterminator.services/resources.html">
     
-    <!-- Favicon - Multiple formats for better browser support -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/cleansure-favicon-transparent.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/cleansure-favicon-transparent.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/cleansure-favicon-transparent.png">
     <link rel="shortcut icon" href="./images/cleansure-favicon-transparent.png">
-    
-    <script src="https://t.contentsquare.net/uxa/96ea2d112f16c.js"></script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
     <script>
@@ -40,12 +38,29 @@
             --cleansure-black: #1f2937;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
+        /* STANDARDIZED FONT SYSTEM - Applied universally */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--cleansure-black);
+        }
+        
+        /* Typography hierarchy with consistent font family */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        p, li, span, div, label, input, select, textarea, button {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .container {
@@ -61,13 +76,6 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
         }
         
         .logo-container {
@@ -101,13 +109,16 @@
         .nav-links a {
             text-decoration: none;
             color: var(--cleansure-black);
-            font-weight: 400 !important;
-            font-size: 1.1rem !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             transition: color 0.3s;
         }
         
-        .nav-links a:hover, .nav-links a.active { color: var(--cleansure-primary); }
+        .nav-links a:hover, 
+        .nav-links a.active { 
+            color: var(--cleansure-primary); 
+        }
         
         .phone-number {
             background: var(--cleansure-primary);
@@ -116,6 +127,7 @@
             border-radius: 5px;
             font-weight: bold;
             font-size: 1.1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .phone-number:hover {
@@ -130,8 +142,17 @@
             text-align: center;
         }
         
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero .subtitle { font-size: 1.3rem; opacity: 0.9; }
+        .hero h1 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .hero .subtitle { 
+            font-size: 1.3rem; 
+            opacity: 0.9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
         
         .resources {
             padding: 5rem 0;
@@ -143,40 +164,66 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: var(--cleansure-black);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
         
         .resource-card {
-            background: var(--cleansure-light-gray);
-            padding: 2rem;
+            background: var(--cleansure-white);
+            border: 1px solid #e5e7eb;
             border-radius: 15px;
-            border-left: 4px solid var(--cleansure-primary);
-            transition: transform 0.3s;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
         
-        .resource-card:hover { transform: translateY(-5px); }
-        
-        .resource-card h3 {
-            color: var(--cleansure-primary);
-            margin-bottom: 1rem;
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         
-        .resource-card .status {
-            display: inline-block;
+        .status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .status.available { background: #10b981; color: white; }
-        .status.coming-soon { background: var(--cleansure-accent); color: white; }
+        .status.coming-soon {
+            background: var(--cleansure-accent);
+            color: var(--cleansure-white);
+        }
+        
+        .status.available {
+            background: var(--cleansure-primary);
+            color: var(--cleansure-white);
+        }
+        
+        .resource-card h3 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .resource-card p {
+            color: var(--cleansure-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
         
         .cta-link {
             display: inline-block;
@@ -187,10 +234,81 @@
             border-radius: 5px;
             margin-top: 1rem;
             transition: background 0.3s;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .cta-link:hover { background: var(--cleansure-dark); }
-        .cta-link.disabled { background: var(--cleansure-gray); cursor: not-allowed; }
+        .cta-link:hover { 
+            background: var(--cleansure-dark); 
+        }
+        
+        .cta-link.disabled { 
+            background: var(--cleansure-gray); 
+            cursor: not-allowed; 
+        }
+        
+        /* Available Resource Card (for the one live resource) */
+        .resource-card.available {
+            border: 2px solid var(--cleansure-primary);
+            background: linear-gradient(135deg, var(--cleansure-white) 0%, var(--cleansure-light) 100%);
+        }
+        
+        .resource-card.available .cta-link {
+            background: var(--cleansure-accent);
+            font-weight: bold;
+        }
+        
+        .resource-card.available .cta-link:hover {
+            background: #e97600;
+        }
+        
+        /* Contact CTA Section */
+        .contact-cta p {
+            color: var(--cleansure-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .contact-primary {
+            background: var(--cleansure-primary);
+            color: var(--cleansure-white);
+        }
+        
+        .contact-primary:hover {
+            background: var(--cleansure-dark);
+            transform: translateY(-2px);
+        }
+        
+        .contact-secondary {
+            background: var(--cleansure-accent);
+            color: var(--cleansure-white);
+        }
+        
+        .contact-secondary:hover {
+            background: #e97600;
+            transform: translateY(-2px);
+        }
         
         footer {
             background: #111827;
@@ -206,18 +324,60 @@
             margin-bottom: 2rem;
         }
         
-        .footer-section h4 { margin-bottom: 1rem; color: var(--cleansure-accent); }
-        .footer-section a { color: #d1d5db; text-decoration: none; }
-        .footer-section a:hover { color: var(--cleansure-accent); }
+        .footer-section h4 { 
+            margin-bottom: 1rem; 
+            color: var(--cleansure-accent);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .footer-section a { 
+            color: #d1d5db; 
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .footer-section a:hover { 
+            color: var(--cleansure-accent); 
+        }
+        
+        .footer-section p {
+            color: #d1d5db;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+            }
             
-            .hero h1 { font-size: 2.5rem; }
-            .hero .subtitle { font-size: 1.1rem; }
+            .hero h1 {
+                font-size: 2rem;
+            }
             
-            .resources-grid { grid-template-columns: 1fr; }
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -234,7 +394,7 @@
                 <!-- Text fallback if image fails -->
                 <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
                     CleanSure
-                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Extermination</div>
+                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Resources</div>
                 </div>
             </div>
             <ul class="nav-links">
@@ -260,85 +420,77 @@
             <h2 class="section-title">Educational Resources</h2>
             <div class="resources-grid">
                 
-                <div class="resource-card">
+                <!-- Available Resource - Bed Bug Prevention Guide -->
+                <div class="resource-card available">
+                
                     <h3>Complete Bed Bug Prevention Guide</h3>
-                    <p>Proven prevention strategies after treatment: how to inspect luggage, protect furniture, and maintain a bed bug-free home. Essential for travelers and homeowners.</p>
-                    <a href="./bed-bug-prevention-guide.html" class="cta-link">Read Prevention Guide</a>
+                    <p>Practical prevention tips after treatment: how to inspect luggage, protect furniture, and maintain a bed bug-free home. Simple steps for travelers and homeowners.</p>
+                    <a href="/bed-bug-prevention-guide.html" class="cta-link">Read Full Guide →</a>
                 </div>
 
                 <div class="resource-card">
-                    <h3>Travel Bed Bug Protection Guide</h3>
-                    <p>Step-by-step hotel room inspection process, packing strategies, and safe return protocols. Avoid bringing bed bugs home from your travels.</p>
-                    <a href="./travel-bed-bug-protection-guide.html" class="cta-link">Read Travel Guide</a>
+                 
+                    <h3>Bed Bug Identification Guide</h3>
+                    <p>Learn to identify bed bugs at every stage of life, distinguish them from other insects, and recognize signs of infestation before it spreads.</p>
+                    <a href="/how-to-identify-bed-bugs-infestation.html" class="cta-link ">How to Identify</a>
                 </div>
 
                 <div class="resource-card">
+                    
+                    <h3>Chemical-Free Treatment Explained</h3>
+                    <p>Understanding how heat treatment works, why it's safer than chemicals, and what to expect during professional bed bug elimination.</p>
+                    <a href="/chemical-free-bed-bug-extermination.html" class="cta-link">Learn More</a>
+                </div>
+
+                <div class="resource-card">
+                    
+                    <h3>Travel Protection Guide</h3>
+                    <p>How to inspect hotel rooms, protect your luggage, and avoid bringing bed bugs home from your travels.</p>
+                    <a href="/travel-bed-bug-protection-guide.html" class="cta-link">Travel Tips</a>
+                </div>
+
+                <div class="resource-card">
+                    
                     <h3>What to Do When You Find Bed Bugs</h3>
-                    <p>Critical first 24-hour action plan when you discover bed bugs. Minimize spread, prepare for treatment, and avoid common mistakes that make problems worse.</p>
-                    <a href="./what-to-do-when-you-find-bed-bugs.html" class="cta-link">Read Action Plan</a>
+                    <p>Step-by-step action plan for the first 24 hours after discovering bed bugs. Immediate steps to prevent spread and get professional help.</p>
+                    <a href="/what-to-do-when-you-find-bed-bugs.html" class="cta-link">Travel Tips</a>
                 </div>
 
-                <div class="resource-card">
-                    <h3>Bed Bug Treatment Options Comparison</h3>
-                    <p>Compare heat treatment, chemical treatment, steam, and integrated approaches. Understand pros, cons, costs, and effectiveness to choose the best solution.</p>
-                    <a href="./bed-bug-extermination-treatment-options.html" class="cta-link">Compare Treatments</a>
+                 <div class="resource-card">
+                    
+                    <h3>2025 Update: Bed Bug Infestations in Philadelphia & Suburbs</h3>
+                    <p>The current state of bed bug activity and infestation in the Greater Philadelphia area.</p>
+                    <a href="bed-bug-infestations-philadelphia-suburbs.html" class="cta-link">About Philly</a>
                 </div>
-
-                <div class="resource-card">
-                    <h3>How to Identify Bed Bug Infestations</h3>
-                    <p>Learn to recognize bed bugs at every stage of life, distinguish them from other insects, and identify signs of infestation before it spreads.</p>
-                    <a href="./how-to-identify-bed-bugs-infestation.html" class="cta-link">Learn Identification</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Chemical-Free Bed Bug Extermination</h3>
-                    <p>Understanding heat treatment and other non-toxic approaches to bed bug elimination. Safe for families, pets, and sensitive individuals.</p>
-                    <a href="./chemical-free-bed-bug-extermination.html" class="cta-link">Learn About Heat Treatment</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Philadelphia Area Bed Bug Trends</h3>
-                    <p>Local analysis of bed bug patterns in Philadelphia, Montgomery, Delaware, and Chester counties. Neighborhood hotspots, seasonal trends, and regional solutions.</p>
-                    <a href="./bed-bug-infestations-philadelphia-suburbs.html" class="cta-link">Read Local Analysis</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Apartment & Rental Property Guide</h3>
-                    <p>Rights and responsibilities for tenants and landlords dealing with bed bug infestations. Philadelphia housing law and building-wide treatment coordination.</p>
+ 
+<div class="resource-card">
+                    <span class="status coming-soon">Coming Soon</span>
+                    <h3>Bed Bug Myths vs. Facts</h3>
+                    <p>Debunking common misconceptions about bed bugs, their behavior, and treatment methods. Separate fact from fiction with expert insights.</p>
                     <a href="#" class="cta-link disabled">Available Soon</a>
                 </div>
 
-                <div class="resource-card">
-                    <h3>Bed Bug Myths vs Facts</h3>
-                    <p>Debunking common misconceptions about bed bugs that can lead to ineffective treatment approaches. Separate science from folklore.</p>
-                    <a href="#" class="cta-link disabled">Available Soon</a>
-                </div>
+              
 
                 <div class="resource-card">
-                    <h3>Post-Treatment Care Guide</h3>
-                    <p>What to expect after professional treatment and how to maintain a bed bug-free environment. Monitoring, follow-up, and long-term prevention.</p>
-                    <a href="#" class="cta-link disabled">Available Soon</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Commercial Property Resources</h3>
-                    <p>Specialized guides for hotels, apartments, and office buildings dealing with bed bug issues. Business continuity and reputation protection.</p>
-                    <a href="#" class="cta-link disabled">Available Soon</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Bed Bug Treatment Cost Guide</h3>
-                    <p>Understanding treatment pricing, insurance considerations, and cost factors. Philadelphia area pricing insights and value comparisons.</p>
+                    <span class="status coming-soon">Coming Soon</span>
+                    <h3>Commercial Bed Bug Management</h3>
+                    <p>Best practices for businesses dealing with bed bug issues. Prevention, response protocols, and maintaining customer confidence.</p>
                     <a href="#" class="cta-link disabled">Available Soon</a>
                 </div>
 
             </div>
+        </div>
+    </section>
 
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--cleansure-light-gray); border-radius: 10px;">
-                <h3>Need Help Now?</h3>
-                <p>Don't wait for resources - our experts are available 24/7 for emergency bed bug situations.</p>
-                <a href="tel:2159064377" class="cta-link" style="margin: 1rem 0.5rem;">Call (215) 906-4377</a>
-                <a href="index.html#contact" class="cta-link">Get Free Inspection</a>
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Need Immediate Help?</h2>
+            <p>Don't wait for the problem to get worse. Our expert team is ready to eliminate your bed bug problem safely and effectively with chemical-free treatment.</p>
+            <div class="contact-buttons">
+                <a href="tel:2159064377" class="contact-button contact-primary">📞 Call Now: (215) 906-4377</a>
+                <a href="index.html#contact" class="contact-button contact-secondary">Get Free Quote</a>
             </div>
         </div>
     </section>
@@ -348,57 +500,87 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>CleanSure</h4>
-                    <p>Professional bed bug extermination for Philadelphia and Southeastern PA.</p>
+                    <p>Chemical-free bed bug extermination specialists serving the Greater Philadelphia area.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <p><a href="bed-bug-prevention-guide.html">Prevention Guide</a></p>
+                    <p><a href="resources.html">Educational Resources</a></p>
+                    <p><a href="index.html#services">Our Services</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <p><a href="index.html#services">Residential Treatment</a></p>
                     <p><a href="commercial.html">Commercial Services</a></p>
-                    <p><a href="resources.html">Bed Bug Resources</a></p>
+                    <p><a href="index.html#process">Our Process</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p><a href="tel:2159064377">(215) 906-4377</a></p>
-                    <p><a href="mailto:help@bedbugexterminator.services">help@bedbugexterminator.services</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Service Area</h4>
-                    <p>Philadelphia and Southeastern PA</p>
-                    <p>24/7 Emergency Service</p>
+                    <p>📞 (215) 906-4377</p>
+                    <p>📧 info@bedbugexterminator.services</p>
+                    <p>🏠 Greater Philadelphia Area</p>
                 </div>
             </div>
-            <p>&copy; 2025 CleanSure. All rights reserved. | Licensed & Insured</p>
+            <p>&copy; 2025 CleanSure. All rights reserved. Licensed and insured bed bug extermination services.</p>
         </div>
     </footer>
 
     <script>
-        // Track resource page engagement
-        document.querySelectorAll('.resource-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const title = this.querySelector('h3').textContent;
-                const status = this.querySelector('.status').textContent;
+        // Enhanced tracking for resources page
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const location = this.closest('section')?.className || 'resources-page';
+                
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'resource_interaction', {
-                        'event_category': 'Content Engagement',
-                        'event_label': title,
-                        'custom_parameter_1': status
+                    gtag('event', 'phone_call', {
+                        'event_category': 'Resources Lead Generation',
+                        'event_label': `Phone Click - ${location}`,
+                        'value': 1
                     });
                 }
             });
         });
 
-        // Track CTA clicks
+        // Track resource clicks
         document.querySelectorAll('.cta-link:not(.disabled)').forEach(link => {
             link.addEventListener('click', function() {
-                const title = this.closest('.resource-card').querySelector('h3').textContent;
+                const resourceTitle = this.closest('.resource-card').querySelector('h3').textContent;
+                
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'resource_cta_click', {
-                        'event_category': 'Lead Generation',
-                        'event_label': title
+                    gtag('event', 'resource_click', {
+                        'event_category': 'Content Engagement',
+                        'event_label': resourceTitle,
+                        'value': 1
+                    });
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
         });
     </script>
 </body>
-</html>
+</html>cta {
+            background: var(--cleansure-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .contact-cta h2 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .contact-
