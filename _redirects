@@ -1,0 +1,38 @@
+# Netlify redirects for clean URLs
+# This file handles URL rewriting to remove .html extensions
+
+# Force HTTPS and remove www
+http://bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
+http://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
+https://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
+
+# Redirect .html extensions to clean URLs
+/index.html / 301!
+/commercial.html /commercial 301!
+/resources.html /resources 301!
+/bed-bug-prevention-guide.html /bed-bug-prevention-guide 301!
+/bed-bug-extermination-treatment-options.html /bed-bug-extermination-treatment-options 301!
+/how-to-identify-bed-bugs-infestation.html /how-to-identify-bed-bugs-infestation 301!
+/what-to-do-when-you-find-bed-bugs.html /what-to-do-when-you-find-bed-bugs 301!
+/bed-bug-infestations-philadelphia-suburbs.html /bed-bug-infestations-philadelphia-suburbs 301!
+/travel-bed-bug-protection-guide.html /travel-bed-bug-protection-guide 301!
+
+# Rewrite clean URLs to serve .html files (200 status = rewrite, not redirect)
+/ /index.html 200
+/commercial /commercial.html 200
+/resources /resources.html 200
+/bed-bug-prevention-guide /bed-bug-prevention-guide.html 200
+/bed-bug-extermination-treatment-options /bed-bug-extermination-treatment-options.html 200
+/how-to-identify-bed-bugs-infestation /how-to-identify-bed-bugs-infestation.html 200
+/what-to-do-when-you-find-bed-bugs /what-to-do-when-you-find-bed-bugs.html 200
+/bed-bug-infestations-philadelphia-suburbs /bed-bug-infestations-philadelphia-suburbs.html 200
+/travel-bed-bug-protection-guide /travel-bed-bug-protection-guide.html 200
+
+# SEO-friendly shortcuts
+/inspection /contact 302
+/quote /contact 302
+/emergency /contact 302
+/commercial-quote /commercial#contact 302
+
+# 404 fallback
+/* /index.html 404
