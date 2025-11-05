@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Direct favicon fix for homepage -->
-    <link rel="shortcut icon" type="image/png" href="/./images/cleansure-favicon-transparent.png?home=1">
-    <link rel="icon" href="/./images/cleansure-favicon-transparent.png?home=1" type="image/png">
+    <link rel="shortcut icon" type="image/png" href="./images/cleansure-favicon-transparent.png?home=1">
+    <link rel="icon" href="./images/cleansure-favicon-transparent.png?home=1" type="image/png">
     
     <title>CleanSure - Guaranteed Chemical-Free Bed Bug Extermination | Same-Day Service</title>
     <meta name="description" content="CleanSure provides guaranteed, chemical-free bed bug extermination in one day. Safe for kids & pets. Discreet service with unmarked vehicles. Free inspection & quote. Call now!">
@@ -71,7 +71,7 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* UPDATED Header with larger logo */
         header {
             background: var(--cleansure-white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -85,134 +85,100 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1.25rem 0; /* Increased from 1rem */
         }
         
+        /* UPDATED Logo container and sizing */
         .logo-container {
-            height: 60px;
+            height: 80px; /* Increased from 60px */
             display: flex;
             align-items: center;
         }
         
         .logo {
-            height: 60px;
+            height: 80px; /* Increased from 60px */
             width: auto;
-            max-width: 250px;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
+            max-width: 320px; /* Increased from 250px */
+            object-fit: contain;
         }
         
-        .nav-links {
+        .nav-menu {
             display: flex;
-            list-style: none;
             gap: 2rem;
+            list-style: none;
             align-items: center;
         }
         
-        .nav-links a {
-            text-decoration: none;
+        .nav-menu a {
             color: var(--cleansure-black);
+            text-decoration: none;
             font-weight: 500;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
             transition: color 0.3s;
         }
         
-        .nav-links a:hover {
-            color: var(--cleansure-primary);
+        .nav-menu a:hover {
+            color: var(--cleansure-secondary);
         }
         
-        .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .phone-number:hover {
-            background: var(--cleansure-dark) !important;
-            color: var(--cleansure-white) !important;
-        }
-        
-        /* Hero Section */
-        .hero {
-            position: relative;
+        .nav-cta {
+            background: var(--cleansure-accent);
             color: white;
-            padding: 10rem 0 5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .nav-cta:hover {
+            background: #dc8a09;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--cleansure-black);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        /* UPDATED Hero Section - adjusted padding for larger header */
+        .hero {
+            background: linear-gradient(135deg, var(--cleansure-primary) 0%, var(--cleansure-secondary) 100%);
+            color: white;
+            padding: 140px 0 80px; /* Increased top padding from 120px */
             text-align: center;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
-        
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
-            z-index: -1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            line-height: 1.2;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
         
-        .hero .subtitle {
-            font-size: 1.4rem;
+        .hero p {
+            font-size: 1.25rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
-            max-width: 800px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .guarantee-badge {
-            display: inline-block;
-            background: var(--cleansure-accent);
-            color: var(--cleansure-white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .cta-buttons {
+        .hero-cta {
             display: flex;
             gap: 1rem;
             justify-content: center;
@@ -222,243 +188,131 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            border-radius: 8px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: all 0.3s;
         }
         
         .cta-primary {
             background: var(--cleansure-accent);
-            color: var(--cleansure-white);
+            color: white;
         }
         
         .cta-primary:hover {
-            background: #e97600;
+            background: #dc8a09;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
         
         .cta-secondary {
-            background: transparent;
-            color: var(--cleansure-white);
-            border: 2px solid var(--cleansure-white);
+            background: white;
+            color: var(--cleansure-primary);
         }
         
         .cta-secondary:hover {
-            background: var(--cleansure-white);
-            color: var(--cleansure-primary);
-        }
-        
-        /* Trust Section */
-        .trust {
             background: var(--cleansure-light);
-            padding: 3rem 0;
+            transform: translateY(-2px);
         }
         
-        .trust-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
+        /* Trust badges */
+        .trust-badges {
+            background: var(--cleansure-light);
+            padding: 2rem 0;
         }
         
-        .trust-item {
-            background: var(--cleansure-white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
         
-        .trust-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--cleansure-dark);
         }
         
-        .trust-item h4 {
-            color: var(--cleansure-primary);
-            margin-bottom: 0.5rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .trust-item p {
-            color: var(--cleansure-gray);
-            font-size: 0.9rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        .badge-icon {
+            font-size: 1.5rem;
         }
         
         /* Services Section */
         .services {
-            padding: 3rem 0;
-            background: var(--cleansure-white);
+            padding: 80px 0;
+            background: white;
         }
         
         .section-title {
+            font-size: 2.5rem;
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: var(--cleansure-black);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--cleansure-gray);
             margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--cleansure-primary);
         }
         
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #f1f5f9;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        
-        .service-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #2d5016;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .service-card p {
-            margin-bottom: 1.5rem;
-            color: #6b7280;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .service-features {
-            list-style: none;
-            text-align: left;
-        }
-        
-        .service-features li {
-            padding: 0.3rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-            color: #374151;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .service-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #2d5016;
-            font-weight: bold;
-        }
-        
-        /* Why Choose Us */
-        .why-choose {
-            padding: 3rem 0;
-            background: var(--cleansure-light-gray);
-        }
-        
-        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
-        .feature {
-            background: var(--cleansure-white);
+        .service-card {
+            background: var(--cleansure-light-gray);
             padding: 2rem;
             border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
         
-        .feature:hover {
+        .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Features Section */
+        .features {
+            background: var(--cleansure-light);
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
         }
         
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            color: var(--cleansure-secondary);
             margin-bottom: 1rem;
-            display: block;
         }
         
-        .feature h3 {
+        .feature h4 {
             color: var(--cleansure-primary);
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .feature p {
-            color: var(--cleansure-gray);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        /* NEW: CTA Section after Why Choose Us */
-        .mid-page-cta {
-            background: var(--cleansure-primary);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .mid-page-cta h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .mid-page-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .mid-page-cta .cta-button {
-            background: var(--cleansure-accent);
-            color: white;
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .mid-page-cta .cta-button:hover {
-            background: #e97600;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            margin-bottom: 0.5rem;
         }
         
         /* Process Section */
         .process {
-            padding: 5rem 0;
-            background: var(--cleansure-white);
+            padding: 80px 0;
+            background: white;
         }
         
         .process-steps {
@@ -470,14 +324,14 @@
         
         .step {
             text-align: center;
-            padding: 2rem;
+            position: relative;
         }
         
         .step-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white);
             width: 60px;
             height: 60px;
+            background: var(--cleansure-secondary);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -485,73 +339,49 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin: 0 auto 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .step h4 {
-            color: var(--cleansure-primary);
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .step p {
-            color: var(--cleansure-gray);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Contact Section */
         .contact {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, var(--cleansure-primary), var(--cleansure-dark));
-            color: var(--cleansure-white);
+            background: var(--cleansure-light);
+            padding: 80px 0;
         }
         
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            gap: 3rem;
         }
         
         .contact-info h2 {
-            font-size: 2.5rem;
+            color: var(--cleansure-primary);
             margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .contact-info p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .contact-features {
             list-style: none;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
         
         .contact-features li {
             padding: 0.5rem 0;
-            position: relative;
-            padding-left: 2rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
         }
         
         .contact-features li:before {
             content: "✓";
-            position: absolute;
-            left: 0;
-            color: #f59e0b;
+            color: var(--cleansure-secondary);
             font-weight: bold;
-            font-size: 1.2rem;
+            margin-right: 1rem;
         }
         
+        /* Form Styles */
         .contact-form {
             background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            color: #333;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
         
         .form-group {
@@ -561,166 +391,185 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #374151;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--cleansure-dark);
+            font-weight: 500;
         }
         
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2d5016;
+            font-family: inherit;
         }
         
         .form-group textarea {
-            height: 120px;
+            min-height: 100px;
             resize: vertical;
         }
         
         .submit-btn {
-            background: #2d5016;
+            background: var(--cleansure-accent);
             color: white;
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
             width: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: background 0.3s;
         }
         
         .submit-btn:hover {
-            background: #1f3a0f;
+            background: #dc8a09;
         }
         
         /* Footer */
         footer {
-            background: #111827;
+            background: var(--cleansure-dark);
             color: white;
-            text-align: center;
-            padding: 2rem 0;
+            padding: 40px 0 20px;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
         
         .footer-section h4 {
             margin-bottom: 1rem;
-            color: #f59e0b;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .footer-section p, .footer-section a {
-            color: #d1d5db;
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: white;
             text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: color 0.3s;
         }
         
         .footer-section a:hover {
-            color: #f59e0b;
+            color: var(--cleansure-accent);
         }
         
-        /* Emergency banner */
+        /* Emergency Banner */
         .emergency-banner {
             position: fixed;
-            bottom: 0;
+            bottom: -100px;
             left: 0;
             right: 0;
-            background: #dc2626;
+            background: var(--cleansure-accent);
             color: white;
-            text-align: center;
             padding: 1rem;
-            font-weight: bold;
-            z-index: 1001;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            transition: bottom 0.3s;
+            z-index: 999;
         }
         
         .emergency-banner.show {
-            transform: translateY(0);
+            bottom: 0;
         }
         
         .emergency-banner a {
             color: white;
-            text-decoration: underline;
-            margin-left: 1rem;
+            font-weight: bold;
+            margin-left: 10px;
         }
         
         .close-banner {
             position: absolute;
-            right: 1rem;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 24px;
             cursor: pointer;
         }
         
-        /* Mobile Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
+            /* UPDATED Mobile header adjustments */
+            nav {
+                padding: 1rem 0; /* Slightly less padding on mobile */
+            }
+            
+            .logo-container {
+                height: 65px; /* Slightly smaller on mobile but still larger than original */
+            }
+            
+            .logo {
+                height: 65px;
+                max-width: 260px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
             }
             
             .hero {
-                min-height: 60vh;
-                padding: 8rem 0 4rem;
+                padding: 120px 0 60px; /* Adjusted for mobile */
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
-            .hero .subtitle {
+            .hero p {
                 font-size: 1.1rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
             }
             
             .contact-content {
                 grid-template-columns: 1fr;
             }
             
-            .services-grid,
-            .features-grid,
-            .process-steps {
-                grid-template-columns: 1fr;
+            .badges-container {
+                gap: 1rem;
             }
             
-            .trust-items {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .badge {
+                font-size: 0.9rem;
             }
         }
         
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -729,80 +578,54 @@
     <header>
         <nav class="container">
             <div class="logo-container">
-                <!-- High-resolution logo -->
-                <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination" 
-                     class="logo"
-                     width="250" 
-                     height="60"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <!-- Text fallback if image fails -->
-                <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
-                    CleanSure
-                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Extermination</div>
-                </div>
+                <img src="./images/cleansure-logo.png" alt="CleanSure - Chemical-Free Bed Bug Extermination" class="logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#services">Services</a></li>
-                <li><a href="/commercial">Commercial</a></li>
                 <li><a href="#process">Process</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:2159064377" class="phone-number">📞 (215) 906-4377</a></li>
+                <li><a href="/commercial">Commercial</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="tel:2159064377" class="nav-cta">📞 (215) 906-4377</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <!-- Single reliable hero image with fallback -->
-            <img src="./images/hero-bedroom-1200.jpg" 
-                 alt="Peaceful bedroom with clean white bedding - representing comfort after bed bug treatment"
-                 class="hero-image"
-                 width="1200" 
-                 height="675"
-                 loading="eager"
-                 onload="this.style.opacity='1';"
-                 onerror="console.log('Hero image failed to load'); this.style.backgroundImage='linear-gradient(135deg, #f8fafc 0%, #e5e7eb 100%)'; this.style.backgroundColor='#f8fafc'; this.alt='Clean, peaceful bedroom environment';">
-        </div>
-        <div class="hero-overlay"></div>
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="guarantee-badge">100% SATISFACTION GUARANTEED</div>
-                <h1>Sleep Peacefully Tonight<br>Chemical-free bed bug extermination, guaranteed</h1>
-                <p class="subtitle">Same-day elimination of all bed bugs using safe, eco-friendly methods. No harmful chemicals, no repeat treatments needed.</p>
-                <div class="cta-buttons">
-                    <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
-                    <a href="#contact" class="cta-button cta-secondary">Get Free Quote</a>
-                </div>
+            <h1>Chemical-Free Bed Bug Extermination</h1>
+            <p>Safe, effective, and guaranteed bed bug removal in one day. No harmful chemicals - safe for your family and pets.</p>
+            <div class="hero-cta">
+                <a href="tel:2159064377" class="cta-button cta-primary">📞 Call for Same-Day Service</a>
+                <a href="#contact" class="cta-button cta-secondary">Get Free Inspection</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust">
+    <!-- Trust Badges -->
+    <section class="trust-badges">
         <div class="container">
-            <div class="trust-items">
-                <div class="trust-item">
-                    <span class="trust-icon">🛡️</span>
-                    <h4>Licensed & Insured</h4>
-                    <p>Fully licensed exterminators with comprehensive insurance coverage</p>
+            <div class="badges-container">
+                <div class="badge">
+                    <span class="badge-icon">✓</span>
+                    <span>Licensed & Insured</span>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">🌱</span>
-                    <h4>100% Chemical-Free</h4>
-                    <p>Safe heat treatment that eliminates bed bugs without toxic chemicals</p>
+                <div class="badge">
+                    <span class="badge-icon">🛡️</span>
+                    <span>100% Guarantee</span>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">⚡</span>
-                    <h4>Same-Day Service</h4>
-                    <p>Emergency response available with most treatments completed in one day</p>
+                <div class="badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>Same-Day Service</span>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">🚗</span>
-                    <h4>Discreet Service</h4>
-                    <p>Unmarked vehicles and confidential treatment to protect your privacy</p>
+                <div class="badge">
+                    <span class="badge-icon">🌱</span>
+                    <span>Eco-Friendly</span>
                 </div>
             </div>
         </div>
@@ -811,92 +634,63 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Complete Bed Bug Solutions</h2>
-            <p class="section-subtitle">Professional, chemical-free bed bug extermination using proven heat treatment technology.</p>
+            <h2 class="section-title">Our Bed Bug Extermination Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🔥</div>
                     <h3>Heat Treatment</h3>
-                    <p>Advanced thermal remediation that eliminates bed bugs in all life stages without harmful chemicals or residue.</p>
-                    <ul class="service-features">
-                        <li>No toxic chemicals</li>
-                        <li>Safe for kids & pets</li>
-                        <li>No preparation required</li>
-                        <li>One-day completion</li>
-                    </ul>
+                    <p>Our primary method uses specialized heat treatment to eliminate bed bugs at all life stages. Reaches 120-140°F to ensure complete extermination without chemicals.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔍</div>
                     <h3>Free Inspection</h3>
-                    <p>Thorough assessment of your property with honest recommendations and transparent pricing.</p>
-                    <ul class="service-features">
-                        <li>Professional evaluation</li>
-                        <li>Detailed treatment plan</li>
-                        <li>Upfront pricing</li>
-                        <li>No hidden fees</li>
-                    </ul>
+                    <p>Professional inspection to identify the extent of your bed bug problem. We provide a detailed assessment and custom treatment plan at no cost.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎓</div>
-                    <h3>Prevention Education</h3>
-                    <p>Comprehensive consultation and materials to help prevent future infestations.</p>
-                    <ul class="service-features">
-                        <li>Prevention strategies</li>
-                        <li>Educational materials</li>
-                        <li>Follow-up support</li>
-                        <li>Peace of mind</li>
-                    </ul>
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Services</h3>
+                    <p>Discreet, efficient bed bug elimination for hotels, apartments, offices, and other commercial properties. Minimize downtime and protect your reputation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose">
+    <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Why Families Choose CleanSure</h2>
-            <p class="section-subtitle">We understand the stress and trauma of bed bug infestations. Our service is designed for your comfort and confidence.</p>
+            <h2 class="section-title">Why Choose CleanSure?</h2>
             <div class="features-grid">
                 <div class="feature">
-                    <div class="feature-icon">🚗</div>
-                    <h3>Unmarked Vehicles</h3>
-                    <p>Complete discretion with unmarked vehicles to protect your privacy from neighbors and guests.</p>
+                    <div class="feature-icon">🌿</div>
+                    <h4>100% Chemical-Free</h4>
+                    <p>Safe for children, pets, and those with sensitivities</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
-                    <h3>Same-Day Service</h3>
-                    <p>Emergency response available. Most treatments completed in one day so you can sleep peacefully tonight.</p>
+                    <h4>One-Day Treatment</h4>
+                    <p>Complete elimination in a single visit</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">👶</div>
-                    <h3>Family & Pet Safe</h3>
-                    <p>No harsh chemicals or toxic residue. Safe for children, pets, and sensitive individuals.</p>
+                    <div class="feature-icon">✅</div>
+                    <h4>Guaranteed Results</h4>
+                    <p>We stand behind our work with a satisfaction guarantee</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>100% Guarantee</h3>
-                    <p>We stand behind our work with a comprehensive satisfaction guarantee and free follow-up if needed.</p>
+                    <div class="feature-icon">🚐</div>
+                    <h4>Discreet Service</h4>
+                    <p>Unmarked vehicles to protect your privacy</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📞</div>
+                    <h4>24/7 Emergency Response</h4>
+                    <p>Available when you need us most</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💰</div>
-                    <h3>Transparent Pricing</h3>
-                    <p>Upfront, honest pricing with no hidden fees. What we quote is what you pay.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Proven Results</h3>
-                    <p>Years of experience with thousands of successful treatments using advanced heat technology.</p>
+                    <h4>Fair Pricing</h4>
+                    <p>Transparent quotes with no hidden fees</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- NEW: Mid-Page CTA Section -->
-    <section class="mid-page-cta">
-        <div class="container">
-            <h3>Ready to Sleep Peacefully Again?</h3>
-            <p>Don't let bed bugs disrupt another night. Get same-day elimination with our chemical-free treatment.</p>
-            <a href="tel:2159064377" class="cta-button">📞 Call Now: (215) 906-4377</a>
         </div>
     </section>
 
@@ -1014,6 +808,12 @@
     </div>
 
     <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
         // Emergency banner functionality
         function showEmergencyBanner() {
             const banner = document.getElementById('emergencyBanner');
