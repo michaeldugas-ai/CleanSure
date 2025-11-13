@@ -68,72 +68,121 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* ===== START: NEW UNIFIED NAVIGATION STYLES ===== */
         header {
-            background: var(--cleansure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
-            top: 0;
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
+            top: 0; /* <-- THE FIX IS HERE */
         }
         
-        nav {
+        nav.container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1rem 1.25rem;
+            max-width: 1200px;
+            margin: auto;
         }
         
-        .logo-container {
-            height: 60px;
-            display: flex;
-            align-items: center;
+        .logo-link {
+            text-decoration: none;
+            display: inline-block;
         }
         
-        .logo {
-            height: 60px;
+        .logo { 
+            height: 60px; 
             width: auto;
             max-width: 250px;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
         }
         
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cleansure-black);
-            font-weight: 500;
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--cleansure-dark); 
+            font-weight: 500; 
+            transition: color 0.3s;
+            /* Kept these from original commercial.html styles for consistency */
             font-size: 1.1rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            transition: color 0.3s;
         }
         
-        .nav-links a:hover,
+        .nav-links a:hover { 
+            color: var(--cleansure-primary); 
+        }
+
+        /* Kept this from original commercial.html for page-specific active state */
         .nav-links a.active {
             color: var(--cleansure-primary);
         }
         
-        .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        .phone-button { 
+            background: var(--cleansure-primary); 
+            color: var(--cleansure-white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background 0.3s; 
         }
         
-        .phone-number:hover {
-            background: var(--cleansure-dark) !important;
-            color: var(--cleansure-white) !important;
+        .phone-button:hover { 
+            background: var(--cleansure-dark); 
         }
+        
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            gap: 5px; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            z-index: 1001; 
+        }
+        
+        .hamburger-line { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--cleansure-primary); 
+            border-radius: 2px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) { 
+            transform: rotate(45deg) translate(5px, 5px); 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) { 
+            opacity: 0; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) { 
+            transform: rotate(-45deg) translate(5px, -5px); 
+        }
+
+        .phone-icon { 
+            display: none; 
+        } 
+        
+        .phone-icon svg { 
+            fill: var(--cleansure-primary); 
+            transition: fill 0.3s; 
+        }
+        
+        .phone-icon:hover svg { 
+            fill: var(--cleansure-dark); 
+        }
+        /* ===== END: NEW UNIFIED NAVIGATION STYLES ===== */
+
         
         /* Hero Section */
         .hero {
@@ -141,7 +190,7 @@
             color: var(--cleansure-white);
             padding: 8rem 0 4rem;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 80px; /* This margin accounts for the fixed header */
         }
         
         .hero h1 {
@@ -546,12 +595,60 @@
             color: var(--cleansure-accent);
         }
         
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            /* ===== START: NEW NAV MOBILE STYLES ===== */
+            .nav-links { 
+                position: fixed; 
+                top: 70px; /* From index.html */
+                right: -100%; 
+                flex-direction: column; 
+                background: var(--cleansure-white); 
+                width: 250px; 
+                height: calc(100vh - 70px); /* Match new top */
+                padding: 2rem; 
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease; 
+                gap: 0;
             }
             
+            .nav-links.active { 
+                right: 0; 
+            }
+            
+            .hamburger { 
+                display: flex; 
+            }
+            
+            .phone-button { 
+                display: none; 
+            }
+            
+            .phone-icon { 
+                display: block; 
+                width: 32px; 
+                height: 32px; 
+            }
+            
+            /* Kept from original commercial.html, required for new slide-out menu */
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--cleansure-light);
+                display: block !important;
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem 0;
+                width: 100%;
+            }
+            /* ===== END: NEW NAV MOBILE STYLES ===== */
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -581,53 +678,251 @@
             }
         }
         
+        /* Added from index.html for new nav */
+        @media (min-width: 769px) { 
+            .phone-icon { 
+                display: none; 
+            } 
+        }
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "CleanSure",
+      "description": "Guaranteed chemical-free bed bug extermination serving Philadelphia and Southeastern Pennsylvania. Same-day service available with unmarked vehicles for complete privacy.",
+      "url": "https://bedbugexterminator.services",
+      "telephone": "+1-267-225-0086",
+      "priceRange": "$$",
+      "image": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "logo": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.9526",
+        "longitude": "-75.1652"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Philadelphia"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Montgomery County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delaware County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Chester County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bucks County"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        }
+      ],
+      "openingHours": "Mo-Su 00:00-24:00",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "currenciesAccepted": "USD",
+      "serviceType": "Bed Bug Extermination",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.9526",
+          "longitude": "-75.1652"
+        },
+        "geoRadius": "50000"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bedbugexterminator.services",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Bed Bug Inspection and Treatment"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Bed Bug Extermination",
+      "name": "Chemical-Free Bed Bug Heat Treatment",
+      "description": "Professional heat treatment eliminates 100% of bed bugs in all life stages without harmful chemicals. Same-day service available.",
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure",
+        "telephone": "+1-267-225-0086"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Pennsylvania"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://bedbugexterminator.services",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+1-267-225-0086",
+          "contactType": "Customer Service",
+          "availableLanguage": "English"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bed Bug Treatment Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Heat Treatment",
+              "description": "Chemical-free heat treatment for homes and apartments. Eliminates all bed bugs in one day."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Bed Bug Treatment",
+              "description": "Discreet bed bug elimination for hotels, apartments, offices, and businesses with unmarked vehicles."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Same-Day Emergency Service",
+              "description": "Emergency response available for urgent bed bug situations. Most treatments completed in one day."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free Inspection",
+              "description": "Thorough property assessment with honest recommendations and upfront pricing."
+            }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Commercial Bed Bug Extermination | CleanSure - Chemical-Free Business Solutions",
+      "description": "Professional chemical-free bed bug extermination for businesses, hotels, offices, and commercial properties. Discreet service with minimal downtime. Same-day service available.",
+      "url": "https://bedbugexterminator.services",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CleanSure Bed Bug Extermination",
+        "url": "https://bedbugexterminator.services"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bed Bug Extermination"
+      },
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo-container">
+            <a href="/" class="logo-link">
                 <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure Commercial Bed Bug Extermination" 
+                     alt="CleanSure" 
                      class="logo"
                      width="250" 
                      height="60"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
-                    CleanSure
-                    <div style="font-size: 0.8rem; font-weight: normal;">Commercial Services</div>
-                </div>
-            </div>
+                     onerror="console.log('Logo failed to load from: ' + this.src);">
+            </a>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="/commercial" class="active">Commercial</a></li>
                 <li><a href="/index.html#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:2159064377" class="phone-number">📞 (215) 906-4377</a></li>
             </ul>
+            
+            <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
         </nav>
     </header>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="guarantee-badge">COMMERCIAL SPECIALISTS</div>
             <h1>Chemical-Free Commercial Bed Bug Solutions</h1>
             <p class="subtitle">Professional bed bug extermination for businesses with minimal downtime and maximum discretion.</p>
             <div class="cta-buttons">
-                <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
+                <a href="tel:2672250086" class="cta-button cta-primary">📞 Call Now: (267) 225-0086</a>
                 <a href="#contact" class="cta-button cta-secondary">Get Commercial Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Section -->
     <section class="trust">
         <div class="container">
             <div class="trust-items">
@@ -655,7 +950,6 @@
         </div>
     </section>
 
-    <!-- Commercial Services -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">Commercial Bed Bug Services</h2>
@@ -730,7 +1024,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Commercial -->
     <section class="why-commercial">
         <div class="container">
             <h2 class="section-title">Why Businesses Choose CleanSure</h2>
@@ -769,7 +1062,6 @@
         </div>
     </section>
 
-    <!-- Industries We Serve -->
     <section class="industries">
         <div class="container">
             <h2 class="section-title">Industries We Serve</h2>
@@ -811,14 +1103,13 @@
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">🚌</div>
-                    <h4>Transportation</h4>
-                    <p>Hotels, airlines, cruise ships, transport hubs</p>
+                    <h4>Travel & Hospitality</h4>
+                    <p>Hotels, motels, retail & office</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
@@ -834,11 +1125,11 @@
                         <li>Comprehensive commercial insurance</li>
                     </ul>
                     <div class="cta-buttons">
-                        <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
+                        <a href="tel:2672250086" class="cta-button cta-primary">📞 Call Now: (267) 225-0086</a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="#" method="POST" data-netlify="true" name="commercial-contact">
+                    <form action="/thank-you.html" method="POST" data-netlify="true" name="commercial-contact">
                         <div class="form-group">
                             <label for="business-name">Business Name</label>
                             <input type="text" id="business-name" name="business-name" required>
@@ -900,7 +1191,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -910,14 +1200,14 @@
                 </div>
                 <div class="footer-section">
                     <h4>Commercial Services</h4>
-                    <p><a href="#services">Hotels & Hospitality</a></p>
-                    <p><a href="#services">Office Buildings</a></p>
-                    <p><a href="#services">Healthcare Facilities</a></p>
-                    <p><a href="#services">Educational Institutions</a></p>
+                    <p><a href="#contact">Hotels & Hospitality</a></p>
+                    <p><a href="#contact">Office Buildings</a></p>
+                    <p><a href="#contact">Healthcare Facilities</a></p>
+                    <p><a href="#contact">Educational Institutions</a></p>
                 <p><a href="/resources">Bed Bug Control Resources</a></p></div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>📞 (215) 906-4377</p>
+                    <p>📞 (267) 225-0086</p>
                     <p>📧 commercial@bedbugexterminator.services</p>
                     <p>🏢 Greater Philadelphia Area</p>
                 </div>
@@ -967,5 +1257,42 @@
             });
         });
     </script>
-</body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            // NOTE: I have *removed* the 'phoneLinks' tracking from this script
+            // to avoid conflicting with your 'commercial_phone_call' tracking
+            // in the script block above.
+            
+            if (hamburger && navLinks) { // Added this check for safety
+                hamburger.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    this.setAttribute('aria-expanded', this.classList.contains('active'));
+                });
+            
+                document.addEventListener('click', function(e) {
+                    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Re-added this logic from your original commercial.html script
+                // to close the menu when a link is clicked.
+                const navItems = navLinks.querySelectorAll('a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        });
+    </script>
+    </body>
 </html>

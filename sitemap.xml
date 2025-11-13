@@ -27,25 +27,25 @@
   <loc>https://bedbugexterminator.services/bed-bug-prevention-guide</loc>
   <lastmod>2025-11-05T15:31:39+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://bedbugexterminator.services/bed-bug-extermination-treatment-options</loc>
   <lastmod>2025-11-05T15:31:39+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://bedbugexterminator.services/how-to-identify-bed-bugs-infestation</loc>
   <lastmod>2025-11-05T15:31:39+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://bedbugexterminator.services/what-to-do-when-you-find-bed-bugs</loc>
   <lastmod>2025-11-05T15:31:39+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://bedbugexterminator.services/bed-bug-infestations-philadelphia-suburbs</loc>
@@ -58,5 +58,17 @@
   <lastmod>2025-11-05T15:31:39+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://bedbugexterminator.services/thank-you</loc>
+  <lastmod>2025-11-06T15:31:39+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.1</priority>
+</url>
+<url>
+  <loc>https://bedbugexterminator.services/bed-bugs-faq</loc>
+  <lastmod>2025-11-07T15:31:39+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 </urlset>

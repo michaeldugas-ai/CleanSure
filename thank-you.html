@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./images/cleansure-favicon-transparent.png">
+    <link rel="icon" href="./images/cleansure-favicon-transparent.png" type="image/png">
+    
+    <title>Thank You - CleanSure Bed Bug Extermination</title>
+    <meta name="description" content="Thank you for contacting CleanSure. We'll be in touch shortly to schedule your free inspection.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Analytics - Track conversion -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4VM702HH2J');
+        
+        // Track conversion
+        gtag('event', 'conversion', {
+            'event_category': 'Lead Generation',
+            'event_label': 'Form Submitted Successfully',
+            'value': 1
+        });
+    </script>
+    
+    <style>
+        :root {
+            --cleansure-primary: #2d5016;
+            --cleansure-secondary: #4a7c59;
+            --cleansure-accent: #f59e0b;
+            --cleansure-dark: #1f3a0f;
+            --cleansure-light: #f0f9f4;
+            --cleansure-white: #ffffff;
+            --cleansure-black: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--cleansure-black);
+            background: linear-gradient(135deg, var(--cleansure-light) 0%, var(--cleansure-white) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .phone-link {
+            background: var(--cleansure-primary);
+            color: var(--cleansure-white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+        
+        .phone-link:hover {
+            background: var(--cleansure-dark);
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 3rem 0;
+        }
+        
+        .thank-you-container {
+            background: var(--cleansure-white);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--cleansure-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            color: var(--cleansure-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--cleansure-black);
+            margin-bottom: 2rem;
+        }
+        
+        .confirmation-box {
+            background: var(--cleansure-light);
+            border-left: 4px solid var(--cleansure-accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+        
+        .confirmation-box h3 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .confirmation-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .confirmation-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .confirmation-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--cleansure-primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .next-steps {
+            background: #fff;
+            border: 2px solid var(--cleansure-primary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 1rem 0;
+            gap: 1rem;
+        }
+        
+        .step-number {
+            background: var(--cleansure-primary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: var(--cleansure-black);
+            margin-bottom: 0.25rem;
+        }
+        
+        .step-content p {
+            color: var(--cleansure-black);
+            opacity: 0.8;
+        }
+        
+        .cta-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--cleansure-light);
+        }
+        
+        .cta-section h3 {
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-primary {
+            background: var(--cleansure-primary);
+            color: white;
+        }
+        
+        .cta-primary:hover {
+            background: var(--cleansure-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 80, 22, 0.3);
+        }
+        
+        .cta-secondary {
+            background: white;
+            color: var(--cleansure-primary);
+            border: 2px solid var(--cleansure-primary);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--cleansure-light);
+        }
+        
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .trust-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .trust-item strong {
+            display: block;
+            color: var(--cleansure-primary);
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background: var(--cleansure-black);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+            }
+            
+            .trust-indicators {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Structured Data for AI Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "CleanSure",
+      "description": "Guaranteed chemical-free bed bug extermination serving Philadelphia and Southeastern Pennsylvania. Same-day service available with unmarked vehicles for complete privacy.",
+      "url": "https://bedbugexterminator.services",
+      "telephone": "+1-267-225-0086",
+      "priceRange": "$$",
+      "image": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "logo": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.9526",
+        "longitude": "-75.1652"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Philadelphia"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Montgomery County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delaware County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Chester County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bucks County"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        }
+      ],
+      "openingHours": "Mo-Su 00:00-24:00",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "currenciesAccepted": "USD",
+      "serviceType": "Bed Bug Extermination",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.9526",
+          "longitude": "-75.1652"
+        },
+        "geoRadius": "50000"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bedbugexterminator.services",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Bed Bug Inspection and Treatment"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Thank You - CleanSure Bed Bug Extermination",
+      "description": "Thank you for contacting CleanSure. We'll be in touch shortly to schedule your free inspection.",
+      "url": "https://bedbugexterminator.services",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CleanSure Bed Bug Extermination",
+        "url": "https://bedbugexterminator.services"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bed Bug Extermination"
+      },
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/">
+                <img src="./images/cleansure-logo-400.png" 
+                     alt="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination" 
+                     class="logo"
+                     width="250"
+                     height="60"
+                     onerror="this.style.display='none'; console.log('Logo failed to load');">
+            </a>
+            <a href="tel:2672250086" class="phone-link">📞 (267) 225-0086</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="thank-you-container">
+                <div class="success-icon">✓</div>
+                
+                <h1>Thank You!</h1>
+                <p class="subtitle">We've received your request and we're on it.</p>
+                
+                <div class="confirmation-box">
+                    <h3>✉️ Your Message Has Been Sent</h3>
+                    <ul>
+                        <li>Our team has been notified and will review your request immediately</li>
+                        <li>You'll receive a call or email within the next 1-2 hours (during business hours)</li>
+                        <li>A confirmation email has been sent to your inbox</li>
+                    </ul>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>What Happens Next?</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>We'll Contact You Shortly</h4>
+                            <p>A CleanSure specialist will reach out within 1-2 hours to discuss your situation and schedule your free inspection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Free Inspection & Quote</h4>
+                            <p>Our certified technician will conduct a thorough inspection and provide you with an upfront, honest quote with no hidden fees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Same-Day Treatment Available</h4>
+                            <p>If you approve, we can often begin treatment the same day. Most treatments are completed in one visit.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-icon">🛡️</span>
+                        <strong>100% Satisfaction Guaranteed</strong>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🌿</span>
+                        <strong>Chemical-Free Treatment</strong>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">⚡</span>
+                        <strong>Same-Day Service</strong>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🚗</span>
+                        <strong>Unmarked Vehicles</strong>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h3>Need Immediate Assistance?</h3>
+                    <p>If your situation is urgent, don't wait for us to call you back.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:2672250086" class="cta-primary">📞 Call Now: (267) 225-0086</a>
+                        <a href="/resources" class="cta-secondary">📚 Learn More About Bed Bugs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CleanSure. Licensed and insured bed bug extermination services.</p>
+            <p>Serving Philadelphia and Southeastern Pennsylvania</p>
+        </div>
+    </footer>
+
+    <script>
+        // Track time on thank-you page
+        let startTime = Date.now();
+        
+        window.addEventListener('beforeunload', function() {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'thank_you_page_engagement', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Time on Thank You Page',
+                    'value': timeOnPage
+                });
+            }
+        });
+        
+        // Track CTA clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'post_conversion_call', {
+                        'event_category': 'Lead Generation',
+                        'event_label': 'Phone Call from Thank You Page',
+                        'value': 2
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

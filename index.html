@@ -71,71 +71,98 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* ===== NEW UNIFIED NAVIGATION STYLES ===== */
         header {
-            background: var(--cleansure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
-            top: 0;
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
         }
         
-        nav {
+        nav.container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1rem 1.25rem;
+            max-width: 1200px;
+            margin: auto;
         }
         
-        .logo-container {
-            height: 60px;
-            display: flex;
-            align-items: center;
+        .logo-link {
+            text-decoration: none;
+            display: inline-block;
         }
         
-        .logo {
-            height: 60px;
+        .logo { 
+            height: 60px; 
             width: auto;
             max-width: 250px;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
         }
         
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cleansure-black);
-            font-weight: 500;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            transition: color 0.3s;
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--cleansure-dark); 
+            font-weight: 500; 
+            transition: color 0.3s; 
         }
         
-        .nav-links a:hover {
-            color: var(--cleansure-primary);
+        .nav-links a:hover { 
+            color: var(--cleansure-primary); 
         }
         
-        .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        .phone-button { 
+            background: var(--cleansure-primary); 
+            color: var(--cleansure-white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background 0.3s; 
         }
         
-        .phone-number:hover {
-            background: var(--cleansure-dark) !important;
-            color: var(--cleansure-white) !important;
+        .phone-button:hover { 
+            background: var(--cleansure-dark); 
         }
+        
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            gap: 5px; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            z-index: 1001; 
+        }
+        
+        .hamburger-line { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--cleansure-primary); 
+            border-radius: 2px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) { 
+            transform: rotate(45deg) translate(5px, 5px); 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) { 
+            opacity: 0; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) { 
+            transform: rotate(-45deg) translate(5px, -5px); 
+        }
+        /* ===== END NEW UNIFIED NAVIGATION STYLES =====
         
         /* Hero Section */
         .hero {
@@ -677,11 +704,37 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
-        /* Mobile Responsive */
+                
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .nav-links { 
+                position: fixed; 
+                top: 70px; 
+                right: -100%; 
+                flex-direction: column; 
+                background: var(--cleansure-white); 
+                width: 250px; 
+                height: calc(100vh - 70px); 
+                padding: 2rem; 
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease; 
+            }
+            
+            .nav-links.active { 
+                right: 0; 
+            }
+            
+            .hamburger { 
+                display: flex; 
+            }
+            
+            .phone-button { 
+                display: none; 
+            }
+            
+            .phone-icon { 
+                display: block; 
+                width: 32px; 
+                height: 32px; 
             }
             
             .hero {
@@ -718,38 +771,245 @@
             }
         }
         
+        @media (min-width: 769px) { 
+            .phone-icon { 
+                display: none; 
+            } 
+        }
+        
+        .phone-icon svg { 
+            fill: var(--cleansure-primary); 
+            transition: fill 0.3s; 
+        }
+        
+        .phone-icon:hover svg { 
+            fill: var(--cleansure-dark); 
+        }
+        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
     </style>
+
+    <!-- Schema.org Structured Data for AI Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "CleanSure",
+      "description": "Guaranteed chemical-free bed bug extermination serving Philadelphia and Southeastern Pennsylvania. Same-day service available with unmarked vehicles for complete privacy.",
+      "url": "https://bedbugexterminator.services",
+      "telephone": "+1-267-225-0086",
+      "priceRange": "$$",
+      "image": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "logo": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.9526",
+        "longitude": "-75.1652"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Philadelphia"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Montgomery County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delaware County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Chester County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bucks County"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        }
+      ],
+      "openingHours": "Mo-Su 00:00-24:00",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "currenciesAccepted": "USD",
+      "serviceType": "Bed Bug Extermination",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.9526",
+          "longitude": "-75.1652"
+        },
+        "geoRadius": "50000"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bedbugexterminator.services",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Bed Bug Inspection and Treatment"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Bed Bug Extermination",
+      "name": "Chemical-Free Bed Bug Heat Treatment",
+      "description": "Professional heat treatment eliminates 100% of bed bugs in all life stages without harmful chemicals. Same-day service available.",
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure",
+        "telephone": "+1-267-225-0086"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Pennsylvania"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://bedbugexterminator.services",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+1-267-225-0086",
+          "contactType": "Customer Service",
+          "availableLanguage": "English"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bed Bug Treatment Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Heat Treatment",
+              "description": "Chemical-free heat treatment for homes and apartments. Eliminates all bed bugs in one day."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Bed Bug Treatment",
+              "description": "Discreet bed bug elimination for hotels, apartments, offices, and businesses with unmarked vehicles."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Same-Day Emergency Service",
+              "description": "Emergency response available for urgent bed bug situations. Most treatments completed in one day."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free Inspection",
+              "description": "Thorough property assessment with honest recommendations and upfront pricing."
+            }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "CleanSure - Guaranteed Chemical-Free Bed Bug Extermination | Same-Day Service",
+      "description": "CleanSure provides guaranteed, chemical-free bed bug extermination in one day. Safe for kids & pets. Discreet service with unmarked vehicles. Free inspection & quote. Call now!",
+      "url": "https://bedbugexterminator.services",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CleanSure Bed Bug Extermination",
+        "url": "https://bedbugexterminator.services"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bed Bug Extermination"
+      },
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- NEW UNIFIED NAVIGATION -->
     <header>
         <nav class="container">
-            <div class="logo-container">
-                <!-- High-resolution logo -->
+            <a href="/" class="logo-link">
                 <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination" 
+                     alt="CleanSure" 
                      class="logo"
                      width="250" 
                      height="60"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <!-- Text fallback if image fails -->
-                <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
-                    CleanSure
-                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Extermination</div>
-                </div>
-            </div>
+                     onerror="console.log('Logo failed to load from: ' + this.src);">
+            </a>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="/commercial">Commercial</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:2159064377" class="phone-number">📞 (215) 906-4377</a></li>
             </ul>
+            <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
         </nav>
     </header>
 
@@ -770,10 +1030,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="guarantee-badge">100% SATISFACTION GUARANTEED</div>
-                <h1>Sleep Peacefully Tonight.<br>Chemical-Free Bed Bug Extermination, Guaranteed.</h1>
+                <h1>Sleep Peacefully Tonight.<br>Chemical-Free Bed Bug Extermination, Guaranteed</h1>
                 <p class="subtitle">Same-day elimination of all bed bugs using safe, eco-friendly methods. No harmful chemicals, no repeat treatments needed.</p>
                 <div class="cta-buttons">
-                    <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
+                    <a href="tel:2672250086" class="cta-button cta-primary">📞 Call Now: (267) 225-0086</a>
                     <a href="#contact" class="cta-button cta-secondary">Get Free Quote</a>
                 </div>
             </div>
@@ -785,9 +1045,9 @@
         <div class="container">
             <div class="trust-items">
                 <div class="trust-item">
-                    <span class="trust-icon">🛡️</span>
-                    <h4>Licensed & Insured</h4>
-                    <p>Fully licensed exterminators with comprehensive insurance coverage</p>
+                    <span class="trust-icon">🚗</span>
+                    <h4>Discreet Service</h4>
+                    <p>Unmarked vehicles and confidential treatment to protect your privacy</p>
                 </div>
                 <div class="trust-item">
                     <span class="trust-icon">🌱</span>
@@ -796,13 +1056,13 @@
                 </div>
                 <div class="trust-item">
                     <span class="trust-icon">⚡</span>
-                    <h4>Same-Day Service</h4>
-                    <p>Emergency response available with most treatments completed in one day</p>
+                    <h4>One-and-Done Treatment</h4>
+                    <p>Emergency response available and treatments are completed in one day</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">🚗</span>
-                    <h4>Discreet Service</h4>
-                    <p>Unmarked vehicles and confidential treatment to protect your privacy</p>
+                    <span class="trust-icon">🛡️</span>
+                    <h4>Licensed & Insured</h4>
+                    <p>Fully licensed exterminators with comprehensive insurance coverage</p>
                 </div>
             </div>
         </div>
@@ -885,7 +1145,7 @@
                 <div class="feature">
                     <div class="feature-icon">🏆</div>
                     <h3>Proven Results</h3>
-                    <p>Years of experience with thousands of successful treatments using advanced heat technology.</p>
+                    <p>Scientifically proven results from highly-trained and certified bed bug experts.</p>
                 </div>
             </div>
         </div>
@@ -896,7 +1156,7 @@
         <div class="container">
             <h3>Ready to Sleep Peacefully Again?</h3>
             <p>Don't let bed bugs disrupt another night. Get same-day elimination with our chemical-free treatment.</p>
-            <a href="tel:2159064377" class="cta-button">📞 Call Now: (215) 906-4377</a>
+            <a href="tel:2672250086" class="cta-button">📞 Call Now: (267) 225-0086</a>
         </div>
     </section>
 
@@ -939,11 +1199,11 @@
                         <li>Unmarked vehicles for privacy</li>
                     </ul>
                     <div class="cta-buttons">
-                        <a href="tel:2159064377" class="cta-button cta-primary">📞 Call Now: (215) 906-4377</a>
+                        <a href="tel:2672250086" class="cta-button cta-primary">📞 Call Now: (267) 225-0086</a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="#" method="POST" data-netlify="true" name="contact">
+                    <form action="/thank-you.html" method="POST" data-netlify="true" name="contact">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -997,8 +1257,8 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>📞 (215) 906-4377</p>
-                    <p>📧 info@bedbugexterminator.services</p>
+                    <p>📞 (267) 225-0086</p>
+                    <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a33343c351a383f3e382f3d3f222e3f283733343b2e352874293f282c33393f29">[email&#160;protected]</a></p>
                     <p>🏠 Greater Philadelphia Area</p>
                 </div>
             </div>
@@ -1009,11 +1269,11 @@
     <!-- Emergency Banner -->
     <div class="emergency-banner" id="emergencyBanner">
         🚨 EMERGENCY BED BUG PROBLEM? Get same-day service!
-        <a href="tel:2159064377">Call (215) 906-4377 now</a>
+        <a href="tel:2672250086">Call (267) 225-0086 now</a>
         <button class="close-banner" onclick="closeEmergencyBanner()">×</button>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Emergency banner functionality
         function showEmergencyBanner() {
             const banner = document.getElementById('emergencyBanner');
@@ -1062,6 +1322,42 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+    </script>
+
+    <!-- NEW UNIFIED NAVIGATION SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                this.setAttribute('aria-expanded', this.classList.contains('active'));
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const location = this.closest('nav') ? 'Navigation' : 'Unknown';
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_call', {
+                            'event_category': 'Lead Generation',
+                            'event_label': `Phone Click - ${location}`,
+                            'value': 1
+                        });
+                    }
+                });
             });
         });
     </script>

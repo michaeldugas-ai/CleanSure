@@ -11,7 +11,6 @@
     <meta property="og:description" content="Expert bed bug resources, prevention tips, and identification guides.">
     <meta property="og:url" content="https://bedbugexterminator.services/resources.html">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/./images/cleansure-favicon-transparent.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/./images/cleansure-favicon-transparent.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/./images/cleansure-favicon-transparent.png">
@@ -69,77 +68,127 @@
             padding: 0 20px;
         }
         
+        /* ===== START: NEW UNIFIED NAVIGATION STYLES ===== */
         header {
-            background: var(--cleansure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
-            top: 0;
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
+            top: 0; /* <-- This rule is included to prevent the gap. */
         }
         
-        .logo-container {
-            height: 60px;
+        nav.container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 1rem 1.25rem; /* Standardized padding */
+            max-width: 1200px;
+            margin: auto;
         }
         
-        .logo {
-            height: 60px;
+        .logo-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .logo { 
+            height: 60px; 
             width: auto;
             max-width: 250px;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cleansure-black);
-            font-weight: 500;
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--cleansure-dark); 
+            font-weight: 500; 
+            transition: color 0.3s;
+            /* Kept from original resources.html styles for consistency */
             font-size: 1.1rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            transition: color 0.3s;
         }
         
-        .nav-links a:hover, 
-        .nav-links a.active { 
+        .nav-links a:hover { 
             color: var(--cleansure-primary); 
         }
-        
-        .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+        /* Kept this from original resources.html for page-specific active state */
+        .nav-links a.active {
+            color: var(--cleansure-primary);
         }
         
-        .phone-number:hover {
-            background: var(--cleansure-dark) !important;
-            color: var(--cleansure-white) !important;
+        .phone-button { 
+            background: var(--cleansure-primary); 
+            color: var(--cleansure-white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background 0.3s; 
         }
+        
+        .phone-button:hover { 
+            background: var(--cleansure-dark); 
+        }
+        
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            gap: 5px; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            z-index: 1001; 
+        }
+        
+        .hamburger-line { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--cleansure-primary); 
+            border-radius: 2px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) { 
+            transform: rotate(45deg) translate(5px, 5px); 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) { 
+            opacity: 0; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) { 
+            transform: rotate(-45deg) translate(5px, -5px); 
+        }
+
+        .phone-icon { 
+            display: none; 
+        } 
+        
+        .phone-icon svg { 
+            fill: var(--cleansure-primary); 
+            transition: fill 0.3s; 
+        }
+        
+        .phone-icon:hover svg { 
+            fill: var(--cleansure-dark); 
+        }
+        /* ===== END: NEW UNIFIED NAVIGATION STYLES ===== */
         
         .hero {
             background: linear-gradient(135deg, var(--cleansure-primary), var(--cleansure-dark));
             color: var(--cleansure-white);
             padding: 8rem 0 4rem;
             text-align: center;
+            margin-top: 80px; /* Added margin-top to account for fixed header */
         }
         
         .hero h1 { 
@@ -262,6 +311,20 @@
         }
         
         /* Contact CTA Section */
+        .contact-cta {
+            /* This class was defined in the broken code block at the end, I've integrated it here */
+            background: var(--cleansure-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            /* This style was in the broken block */
+            color: var(--cleansure-primary);
+            margin-bottom: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
         .contact-cta p {
             color: var(--cleansure-gray);
             font-size: 1.1rem;
@@ -347,9 +410,55 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            /* ===== START: NEW NAV MOBILE STYLES ===== */
+            .nav-links { 
+                position: fixed; 
+                top: 70px; /* Standardized height */
+                right: -100%; 
+                flex-direction: column; 
+                background: var(--cleansure-white); 
+                width: 250px; 
+                height: calc(100vh - 70px); /* Match new top */
+                padding: 2rem; 
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease; 
+                gap: 0;
             }
+            
+            .nav-links.active { 
+                right: 0; 
+            }
+            
+            .hamburger { 
+                display: flex; 
+            }
+            
+            .phone-button { 
+                display: none; 
+            }
+            
+            .phone-icon { 
+                display: block; 
+                width: 32px; 
+                height: 32px; 
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--cleansure-light);
+                display: block !important;
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem 0;
+                width: 100%;
+            }
+            /* ===== END: NEW NAV MOBILE STYLES ===== */
             
             .hero h1 {
                 font-size: 2rem;
@@ -375,39 +484,167 @@
             }
         }
         
+        /* Added for new nav */
+        @media (min-width: 769px) { 
+            .phone-icon { 
+                display: none; 
+            } 
+        }
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "CleanSure",
+      "description": "Guaranteed chemical-free bed bug extermination serving Philadelphia and Southeastern Pennsylvania. Same-day service available with unmarked vehicles for complete privacy.",
+      "url": "https://bedbugexterminator.services",
+      "telephone": "+1-267-225-0086",
+      "priceRange": "$$",
+      "image": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "logo": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.9526",
+        "longitude": "-75.1652"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Philadelphia"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Montgomery County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delaware County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Chester County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bucks County"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        }
+      ],
+      "openingHours": "Mo-Su 00:00-24:00",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "currenciesAccepted": "USD",
+      "serviceType": "Bed Bug Extermination",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.9526",
+          "longitude": "-75.1652"
+        },
+        "geoRadius": "50000"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bedbugexterminator.services",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Bed Bug Inspection and Treatment"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Bed Bug Resources | CleanSure - Expert Information & Prevention Tips",
+      "description": "Comprehensive bed bug resources, prevention tips, identification guides, and expert advice from CleanSure's professional exterminators.",
+      "url": "https://bedbugexterminator.services",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CleanSure Bed Bug Extermination",
+        "url": "https://bedbugexterminator.services"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bed Bug Extermination"
+      },
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo-container">
+            <a href="/" class="logo-link">
                 <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure Bed Bug Resources" 
+                     alt="CleanSure" 
                      class="logo"
                      width="250" 
                      height="60"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <!-- Text fallback if image fails -->
-                <div style="display: none; color: var(--cleansure-primary); font-size: 1.5rem; font-weight: bold;">
-                    CleanSure
-                    <div style="font-size: 0.8rem; font-weight: normal;">Bed Bug Resources</div>
-                </div>
-            </div>
+                     onerror="console.log('Logo failed to load from: ' + this.src);">
+            </a>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="/commercial">Commercial</a></li>
                 <li><a href="/index.html#process">Process</a></li>
                 <li><a href="/resources" class="active">Resources</a></li>
-                <li><a href="tel:2159064377" class="phone-number">📞 (215) 906-4377</a></li>
             </ul>
+            
+            <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
         </nav>
     </header>
-
     <section class="hero">
         <div class="container">
             <h1>Bed Bug Resources</h1>
@@ -420,7 +657,6 @@
             <h2 class="section-title">Educational Resources</h2>
             <div class="resources-grid">
                 
-                <!-- Available Resource - Bed Bug Prevention Guide -->
                 <div class="resource-card available">
                 
                     <h3>Complete Bed Bug Prevention Guide</h3>
@@ -463,7 +699,7 @@
                     <a href="/bed-bug-infestations-philadelphia-suburbs" class="cta-link">About Philly</a>
                 </div>
  
-<div class="resource-card">
+                <div class="resource-card">
                     <span class="status coming-soon">Coming Soon</span>
                     <h3>Bed Bug Myths vs. Facts</h3>
                     <p>Debunking common misconceptions about bed bugs, their behavior, and treatment methods. Separate fact from fiction with expert insights.</p>
@@ -483,13 +719,12 @@
         </div>
     </section>
 
-    <!-- Contact CTA Section -->
     <section class="contact-cta">
         <div class="container">
             <h2>Need Immediate Help?</h2>
             <p>Don't wait for the problem to get worse. Our expert team is ready to eliminate your bed bug problem safely and effectively with chemical-free treatment.</p>
             <div class="contact-buttons">
-                <a href="tel:2159064377" class="contact-button contact-primary">📞 Call Now: (215) 906-4377</a>
+                <a href="tel:2672250086" class="contact-button contact-primary">📞 Call Now: (267) 225-0086</a>
                 <a href="/index.html#contact" class="contact-button contact-secondary">Get Free Quote</a>
             </div>
         </div>
@@ -517,7 +752,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>📞 (215) 906-4377</p>
+                    <p>📞 (267) 225-0086</p>
                     <p>📧 info@bedbugexterminator.services</p>
                     <p>🏠 Greater Philadelphia Area</p>
                 </div>
@@ -571,17 +806,41 @@
             });
         });
     </script>
-</body>
-</html>cta {
-            background: var(--cleansure-light);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .contact-cta h2 {
-            color: var(--cleansure-primary);
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .contact-
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            // NOTE: Phone tracking is intentionally omitted from this script
+            // because this page (resources.html) has its own
+            // 'Resources Lead Generation' tracking in the script block above.
+            
+            if (hamburger && navLinks) { // Added this check for safety
+                hamburger.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    this.setAttribute('aria-expanded', this.classList.contains('active'));
+                });
+            
+                document.addEventListener('click', function(e) {
+                    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close menu when clicking a nav link
+                const navItems = navLinks.querySelectorAll('a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        });
+    </script>
+    </body>
+</html>
