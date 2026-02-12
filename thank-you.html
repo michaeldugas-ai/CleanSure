@@ -53,50 +53,68 @@
             flex-direction: column;
         }
         
-        header {
-            background: var(--cleansure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-        }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        nav {
+        /* ===== NEW UNIFIED NAVIGATION STYLES (SIMPLIFIED FOR THANK-YOU PAGE) ===== */
+        header {
+            position: fixed;
+            width: 100%;
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        nav.container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 1.25rem;
+            max-width: 1200px;
+            margin: auto;
         }
         
-        .logo {
-            height: 60px;
-            width: auto;
-        }
-        
-        .phone-link {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+        .logo-link {
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-            white-space: nowrap;
+            display: inline-block;
         }
         
-        .phone-link:hover {
-            background: var(--cleansure-dark);
+        .logo { 
+            height: 60px; 
+            width: auto;
+            max-width: 250px;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
+        
+        .phone-button { 
+            background: var(--cleansure-primary); 
+            color: var(--cleansure-white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background 0.3s; 
+        }
+        
+        .phone-button:hover { 
+            background: var(--cleansure-dark); 
+        }
+        
+        .phone-icon { 
+            display: none;
+        }
+        /* ===== END NEW UNIFIED NAVIGATION STYLES =====
         
         /* Main Content */
         main {
             flex: 1;
             display: flex;
             align-items: center;
-            padding: 3rem 0;
+            padding: 6rem 0 3rem;
         }
         
         .thank-you-container {
@@ -312,6 +330,16 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .phone-button { 
+                display: none; 
+            }
+            
+            .phone-icon { 
+                display: block; 
+                width: 32px; 
+                height: 32px; 
+            }
+            
             .thank-you-container {
                 padding: 2rem 1.5rem;
             }
@@ -335,6 +363,21 @@
             .trust-indicators {
                 grid-template-columns: 1fr 1fr;
             }
+        }
+        
+        @media (min-width: 769px) { 
+            .phone-icon { 
+                display: none; 
+            } 
+        }
+        
+        .phone-icon svg { 
+            fill: var(--cleansure-primary); 
+            transition: fill 0.3s; 
+        }
+        
+        .phone-icon:hover svg { 
+            fill: var(--cleansure-dark); 
         }
     </style>
 
@@ -460,15 +503,18 @@
 <body>
     <header>
         <nav class="container">
-            <a href="/">
+            <a href="/" class="logo-link">
                 <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure - Guaranteed Chemical-Free Bed Bug Extermination" 
+                     alt="CleanSure" 
                      class="logo"
-                     width="250"
+                     width="250" 
                      height="60"
-                     onerror="this.style.display='none'; console.log('Logo failed to load');">
+                     onerror="console.log('Logo failed to load from: ' + this.src);">
             </a>
-            <a href="tel:2672250086" class="phone-link">📞 (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
         </nav>
     </header>
 
@@ -557,6 +603,25 @@
     </footer>
 
     <script>
+        // NEW UNIFIED NAVIGATION SCRIPT (SIMPLIFIED - NO HAMBURGER)
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const location = this.closest('nav') ? 'Navigation' : 
+                                   this.classList.contains('cta-primary') ? 'CTA Button' : 'Unknown';
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_call', {
+                            'event_category': 'Lead Generation',
+                            'event_label': `Phone Click - ${location}`,
+                            'value': 1
+                        });
+                    }
+                });
+            });
+        });
+        
         // Track time on thank-you page
         let startTime = Date.now();
         

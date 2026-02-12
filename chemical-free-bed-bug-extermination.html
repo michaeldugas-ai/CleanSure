@@ -75,82 +75,98 @@
             padding: 0 20px;
         }
         
+        /* ===== NEW UNIFIED NAVIGATION STYLES ===== */
         header {
-            background: var(--cleansure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
-            top: 0;
+            background: var(--cleansure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
         }
         
-        nav {
+        nav.container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 0;
+            padding: 1rem 1.25rem;
+            max-width: 1200px;
+            margin: auto;
         }
         
-        /* Standalone phone number (outside nav-links) */
-        nav .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            white-space: nowrap;
+        .logo-link {
             text-decoration: none;
-            transition: background 0.3s;
+            display: inline-block;
         }
         
-        nav .phone-number:hover {
-            background: var(--cleansure-dark);
-        }
-        
-        .logo-container {
-            height: 60px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 60px;
+        .logo { 
+            height: 60px; 
             width: auto;
             max-width: 250px;
+            image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
         }
         
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cleansure-black);
-            font-weight: 400 !important;
-            font-size: 1.1rem !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-            transition: color 0.3s;
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--cleansure-dark); 
+            font-weight: 500; 
+            transition: color 0.3s; 
         }
         
-        .nav-links a:hover { color: var(--cleansure-primary); }
-        
-        .phone-number {
-            background: var(--cleansure-primary);
-            color: var(--cleansure-white) !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
+        .nav-links a:hover { 
+            color: var(--cleansure-primary); 
         }
         
-        .phone-number:hover {
-            background: var(--cleansure-dark) !important;
+        .phone-button { 
+            background: var(--cleansure-primary); 
+            color: var(--cleansure-white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background 0.3s; 
         }
+        
+        .phone-button:hover { 
+            background: var(--cleansure-dark); 
+        }
+        
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            gap: 5px; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            z-index: 1001; 
+        }
+        
+        .hamburger-line { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--cleansure-primary); 
+            border-radius: 2px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) { 
+            transform: rotate(45deg) translate(5px, 5px); 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) { 
+            opacity: 0; 
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) { 
+            transform: rotate(-45deg) translate(5px, -5px); 
+        }
+        /* ===== END NEW UNIFIED NAVIGATION STYLES ===== */
         
         .blog-content {
             max-width: 800px;
@@ -467,53 +483,53 @@
             display: inline-block;
         }
         
-    
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
+            .nav-links { 
+                position: fixed; 
+                top: 70px; 
+                right: -100%; 
+                flex-direction: column; 
+                background: var(--cleansure-white); 
+                width: 250px; 
+                height: calc(100vh - 70px); 
+                padding: 2rem; 
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease; 
             }
             
-            /* Phone number stays visible next to hamburger */
-            nav .phone-number {
-                font-size: 0.9rem;
-                padding: 0.7rem 1rem;
+            .nav-links.active { 
+                right: 0; 
             }
             
-            /* Navigation menu slides out */
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                right: -100%;
-                width: 250px;
-                height: calc(100vh - 80px);
-                background: var(--cleansure-white);
-                flex-direction: column;
-                padding: 2rem 1.5rem;
-                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-                transition: right 0.3s ease;
-                gap: 0;
+            .hamburger { 
+                display: flex; 
             }
             
-            .nav-links.active {
-                right: 0;
+            .phone-button { 
+                display: none; 
             }
             
-            .nav-links li {
-                width: 100%;
-                border-bottom: 1px solid var(--cleansure-light);
-                display: block !important;
+            .phone-icon { 
+                display: block; 
+                width: 32px; 
+                height: 32px; 
             }
-            
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
-            
-            .nav-links a {
-                display: block;
-                padding: 1rem 0;
-                width: 100%;
-            }
+        }
+        
+        @media (min-width: 769px) { 
+            .phone-icon { 
+                display: none; 
+            } 
+        }
+        
+        .phone-icon svg { 
+            fill: var(--cleansure-primary); 
+            transition: fill 0.3s; 
+        }
+        
+        .phone-icon:hover svg { 
+            fill: var(--cleansure-dark); 
+        }
 
     </style>
 
@@ -575,27 +591,27 @@
     <header>
         <nav class="container">
             <a href="/" class="logo-link">
-                <div class="logo-container">
-                    <img src="./images/cleansure-logo-400.png" 
-                     alt="CleanSure - Bed Bug Experts" 
-                     class="logo">
-                </div>
+                <img src="./images/cleansure-logo-400.png" 
+                     alt="CleanSure" 
+                     class="logo"
+                     width="250" 
+                     height="60"
+                     onerror="console.log('Logo failed to load from: ' + this.src);">
             </a>
-            
-            <!-- Hamburger Menu Button -->
             <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
-            
-            <ul class="nav-links">                <li><a href="/./index.html#services">Services</a></li>
+            <ul class="nav-links">
+                <li><a href="/./index.html#services">Services</a></li>
                 <li><a href="/./commercial">Commercial</a></li>
                 <li><a href="/./resources">Resources</a></li>
             </ul>
-            
-            <!-- Phone number - always visible -->
-            <a href="tel:2672250086" class="phone-number">📞 (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
         </nav>
     </header>
 
@@ -825,41 +841,39 @@
         });
     </script>
 
+    <!-- NEW UNIFIED NAVIGATION SCRIPT -->
     <script>
-        // Hamburger menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
             
-            if (hamburger && navLinks) {
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                    
-                    // Update aria-expanded for accessibility
-                    const isExpanded = this.classList.contains('active');
-                    this.setAttribute('aria-expanded', isExpanded);
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                this.setAttribute('aria-expanded', this.classList.contains('active'));
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const location = this.closest('nav') ? 'Navigation' : 'Unknown';
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_call', {
+                            'event_category': 'Lead Generation',
+                            'event_label': `Phone Click - ${location}`,
+                            'value': 1
+                        });
                     }
                 });
-                
-                // Close menu when clicking a nav link
-                const navItems = navLinks.querySelectorAll('a');
-                navItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                    });
-                });
-            }
+            });
         });
     </script>
 </body>

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" type="image/png" href="/./images/cleansure-favicon-transparent.png">
+    <link rel="icon" href="/./images/cleansure-favicon-transparent.png" type="image/png">
+    
     <title>Commercial Bed Bug Extermination | CleanSure - Chemical-Free Business Solutions</title>
     <meta name="description" content="Professional chemical-free bed bug extermination for businesses, hotels, offices, and commercial properties. Discreet service with minimal downtime. Same-day service available.">
     <meta name="keywords" content="commercial bed bug extermination, hotel bed bug treatment, office pest control, business bed bug removal, commercial chemical-free pest control">
     
     <meta property="og:title" content="Commercial Bed Bug Extermination | CleanSure">
     <meta property="og:description" content="Chemical-free bed bug solutions for businesses. Discreet, effective treatment with minimal operational disruption.">
-    <meta property="og:url" content="https://bedbugexterminator.services/commercial.html">
+    <meta property="og:url" content="https://bedbugexterminator.services/commercial">
     <meta property="og:type" content="website">
-    
-    <link rel="shortcut icon" type="image/png" href="/./images/cleansure-favicon-transparent.png">
-    <link rel="icon" href="/./images/cleansure-favicon-transparent.png" type="image/png">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
     <script>
@@ -42,15 +43,12 @@
             box-sizing: border-box;
         }
         
-        /* STANDARDIZED FONT SYSTEM - Applied universally */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--cleansure-black);
-            padding-bottom: 60px;
         }
         
-        /* Typography hierarchy with consistent font family */
         h1, h2, h3, h4, h5, h6 {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-weight: 700;
@@ -68,14 +66,13 @@
             padding: 0 20px;
         }
         
-        /* ===== START: NEW UNIFIED NAVIGATION STYLES ===== */
+        /* ===== NEW UNIFIED NAVIGATION STYLES ===== */
         header {
             position: fixed;
             width: 100%;
             background: var(--cleansure-white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-            top: 0; /* <-- THE FIX IS HERE */
         }
         
         nav.container {
@@ -110,19 +107,16 @@
             text-decoration: none; 
             color: var(--cleansure-dark); 
             font-weight: 500; 
-            transition: color 0.3s;
-            /* Kept these from original commercial.html styles for consistency */
-            font-size: 1.1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: color 0.3s; 
         }
         
         .nav-links a:hover { 
             color: var(--cleansure-primary); 
         }
-
-        /* Kept this from original commercial.html for page-specific active state */
+        
         .nav-links a.active {
             color: var(--cleansure-primary);
+            font-weight: 600;
         }
         
         .phone-button { 
@@ -168,10 +162,10 @@
         .hamburger.active .hamburger-line:nth-child(3) { 
             transform: rotate(-45deg) translate(5px, -5px); 
         }
-
+        
         .phone-icon { 
             display: none; 
-        } 
+        }
         
         .phone-icon svg { 
             fill: var(--cleansure-primary); 
@@ -181,28 +175,26 @@
         .phone-icon:hover svg { 
             fill: var(--cleansure-dark); 
         }
-        /* ===== END: NEW UNIFIED NAVIGATION STYLES ===== */
-
+        /* ===== END NEW UNIFIED NAVIGATION STYLES ===== */
         
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--cleansure-primary), var(--cleansure-dark));
             color: var(--cleansure-white);
-            padding: 8rem 0 4rem;
+            padding: 10rem 0 4rem;
             text-align: center;
-            margin-top: 80px; /* This margin accounts for the fixed header */
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .hero .subtitle {
             font-size: 1.3rem;
             opacity: 0.9;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto 2rem;
         }
         
         .guarantee-badge {
@@ -216,7 +208,6 @@
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .cta-buttons {
@@ -224,7 +215,6 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
         
         .cta-button {
@@ -235,7 +225,6 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .cta-primary {
@@ -288,18 +277,16 @@
         .trust-item h4 {
             color: var(--cleansure-primary);
             margin-bottom: 0.5rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .trust-item p {
             color: var(--cleansure-gray);
             font-size: 0.9rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        /* Commercial Services Section */
+        /* Services Section */
         .services {
-            padding: 5rem 0;
+            padding: 4rem 0;
             background: var(--cleansure-white);
         }
         
@@ -308,26 +295,27 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: var(--cleansure-black);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
         
         .service-card {
-            background: var(--cleansure-white);
-            padding: 2.5rem;
+            background: white;
+            padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f1f5f9;
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
         
         .service-icon {
@@ -336,15 +324,14 @@
         }
         
         .service-card h3 {
-            color: var(--cleansure-primary);
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--cleansure-primary);
         }
         
         .service-card p {
+            margin-bottom: 1.5rem;
             color: var(--cleansure-gray);
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .service-features {
@@ -356,8 +343,7 @@
             padding: 0.3rem 0;
             position: relative;
             padding-left: 1.5rem;
-            color: var(--cleansure-gray);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #374151;
         }
         
         .service-features li:before {
@@ -368,9 +354,9 @@
             font-weight: bold;
         }
         
-        /* Why Choose Commercial Section */
+        /* Why Commercial Section */
         .why-commercial {
-            padding: 5rem 0;
+            padding: 4rem 0;
             background: var(--cleansure-light-gray);
         }
         
@@ -378,7 +364,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
         
         .feature {
@@ -403,83 +388,74 @@
         .feature h3 {
             color: var(--cleansure-primary);
             margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .feature p {
             color: var(--cleansure-gray);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Industries Section */
         .industries {
-            padding: 5rem 0;
+            padding: 4rem 0;
             background: var(--cleansure-white);
         }
         
         .industries-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
         }
         
         .industry-card {
             background: var(--cleansure-light);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease;
         }
         
         .industry-card:hover {
-            transform: translateY(-5px);
-            background: var(--cleansure-white);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
         }
         
         .industry-icon {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         
         .industry-card h4 {
             color: var(--cleansure-primary);
             margin-bottom: 0.5rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.1rem;
         }
         
         .industry-card p {
             color: var(--cleansure-gray);
             font-size: 0.9rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Contact Section */
         .contact {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, var(--cleansure-primary), var(--cleansure-dark));
-            color: var(--cleansure-white);
+            padding: 4rem 0;
+            background: var(--cleansure-light);
         }
         
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            gap: 3rem;
+            align-items: start;
         }
         
         .contact-info h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--cleansure-black);
         }
         
         .contact-info p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin-bottom: 1.5rem;
+            color: var(--cleansure-gray);
         }
         
         .contact-features {
@@ -490,24 +466,24 @@
         .contact-features li {
             padding: 0.5rem 0;
             position: relative;
-            padding-left: 2rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding-left: 1.8rem;
+            color: var(--cleansure-black);
         }
         
         .contact-features li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: var(--cleansure-accent);
+            color: var(--cleansure-primary);
             font-weight: bold;
             font-size: 1.2rem;
         }
         
         .contact-form {
-            background: white;
-            padding: 2.5rem;
+            background: var(--cleansure-white);
+            padding: 2rem;
             border-radius: 15px;
-            color: #333;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
         
         .form-group {
@@ -518,46 +494,35 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #374151;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--cleansure-black);
         }
         
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--cleansure-primary);
         }
         
         .form-group textarea {
-            height: 120px;
+            min-height: 100px;
             resize: vertical;
         }
         
         .submit-btn {
+            width: 100%;
+            padding: 1rem;
             background: var(--cleansure-primary);
-            color: white;
-            padding: 1.2rem 2rem;
+            color: var(--cleansure-white);
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
-            width: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         .submit-btn:hover {
@@ -566,51 +531,34 @@
         
         /* Footer */
         footer {
-            background: #111827;
-            color: white;
-            text-align: center;
+            background: var(--cleansure-dark);
+            color: var(--cleansure-white);
             padding: 2rem 0;
+            text-align: center;
         }
         
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: var(--cleansure-accent);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .footer-section p, .footer-section a {
-            color: #d1d5db;
+        footer a {
+            color: var(--cleansure-white);
             text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .footer-section a:hover {
-            color: var(--cleansure-accent);
+        footer a:hover {
+            text-decoration: underline;
         }
         
-
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            /* ===== START: NEW NAV MOBILE STYLES ===== */
             .nav-links { 
                 position: fixed; 
-                top: 70px; /* From index.html */
+                top: 70px; 
                 right: -100%; 
                 flex-direction: column; 
                 background: var(--cleansure-white); 
                 width: 250px; 
-                height: calc(100vh - 70px); /* Match new top */
+                height: calc(100vh - 70px); 
                 padding: 2rem; 
                 box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
                 transition: right 0.3s ease; 
-                gap: 0;
             }
             
             .nav-links.active { 
@@ -631,24 +579,10 @@
                 height: 32px; 
             }
             
-            /* Kept from original commercial.html, required for new slide-out menu */
-            .nav-links li {
-                width: 100%;
-                border-bottom: 1px solid var(--cleansure-light);
-                display: block !important;
+            .hero {
+                padding: 8rem 0 3rem;
             }
             
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
-            
-            .nav-links a {
-                display: block;
-                padding: 1rem 0;
-                width: 100%;
-            }
-            /* ===== END: NEW NAV MOBILE STYLES ===== */
-
             .hero h1 {
                 font-size: 2rem;
             }
@@ -657,229 +591,26 @@
                 font-size: 1.1rem;
             }
             
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
             .contact-content {
                 grid-template-columns: 1fr;
             }
             
             .services-grid,
-            .features-grid,
-            .industries-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
             
             .trust-items {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
             }
         }
         
-        /* Added from index.html for new nav */
         @media (min-width: 769px) { 
             .phone-icon { 
                 display: none; 
             } 
         }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "PestControlService",
-      "name": "CleanSure",
-      "description": "Guaranteed chemical-free bed bug extermination serving Philadelphia and Southeastern Pennsylvania. Same-day service available with unmarked vehicles for complete privacy.",
-      "url": "https://bedbugexterminator.services",
-      "telephone": "+1-267-225-0086",
-      "priceRange": "$$",
-      "image": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
-      "logo": "https://bedbugexterminator.services/images/cleansure-logo-400.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Philadelphia",
-        "addressRegion": "PA",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "39.9526",
-        "longitude": "-75.1652"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Philadelphia"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Montgomery County"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Delaware County"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Chester County"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bucks County"
-        },
-        {
-          "@type": "State",
-          "name": "Pennsylvania"
-        }
-      ],
-      "openingHours": "Mo-Su 00:00-24:00",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "paymentAccepted": "Cash, Credit Card, Check",
-      "currenciesAccepted": "USD",
-      "serviceType": "Bed Bug Extermination",
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "39.9526",
-          "longitude": "-75.1652"
-        },
-        "geoRadius": "50000"
-      },
-      "potentialAction": {
-        "@type": "ReserveAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://bedbugexterminator.services",
-          "inLanguage": "en-US",
-          "actionPlatform": [
-            "http://schema.org/DesktopWebPlatform",
-            "http://schema.org/MobileWebPlatform"
-          ]
-        },
-        "result": {
-          "@type": "Reservation",
-          "name": "Bed Bug Inspection and Treatment"
-        }
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Bed Bug Extermination",
-      "name": "Chemical-Free Bed Bug Heat Treatment",
-      "description": "Professional heat treatment eliminates 100% of bed bugs in all life stages without harmful chemicals. Same-day service available.",
-      "provider": {
-        "@type": "PestControlService",
-        "name": "CleanSure",
-        "telephone": "+1-267-225-0086"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Pennsylvania"
-      },
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://bedbugexterminator.services",
-        "servicePhone": {
-          "@type": "ContactPoint",
-          "telephone": "+1-267-225-0086",
-          "contactType": "Customer Service",
-          "availableLanguage": "English"
-        }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bed Bug Treatment Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Residential Heat Treatment",
-              "description": "Chemical-free heat treatment for homes and apartments. Eliminates all bed bugs in one day."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Bed Bug Treatment",
-              "description": "Discreet bed bug elimination for hotels, apartments, offices, and businesses with unmarked vehicles."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Same-Day Emergency Service",
-              "description": "Emergency response available for urgent bed bug situations. Most treatments completed in one day."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Free Inspection",
-              "description": "Thorough property assessment with honest recommendations and upfront pricing."
-            }
-          }
-        ]
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Commercial Bed Bug Extermination | CleanSure - Chemical-Free Business Solutions",
-      "description": "Professional chemical-free bed bug extermination for businesses, hotels, offices, and commercial properties. Discreet service with minimal downtime. Same-day service available.",
-      "url": "https://bedbugexterminator.services",
-      "inLanguage": "en-US",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "CleanSure Bed Bug Extermination",
-        "url": "https://bedbugexterminator.services"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Bed Bug Extermination"
-      },
-      "provider": {
-        "@type": "PestControlService",
-        "name": "CleanSure"
-      }
-    }
-    </script>
 </head>
 <body>
     <header>
@@ -897,20 +628,19 @@
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
-            
             <ul class="nav-links">
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="/commercial" class="active">Commercial</a></li>
-                <li><a href="/index.html#process">Process</a></li>
+                <li><a href="/resources">Resources</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            
             <a href="tel:2672250086" class="phone-button">Call (267) 225-0086</a>
             <a href="tel:2672250086" class="phone-icon" aria-label="Call CleanSure">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
             </a>
         </nav>
     </header>
+
     <section class="hero">
         <div class="container">
             <div class="guarantee-badge">COMMERCIAL SPECIALISTS</div>
@@ -1103,8 +833,8 @@
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">🚌</div>
-                    <h4>Travel & Hospitality</h4>
-                    <p>Hotels, motels, retail & office</p>
+                    <h4>Transportation</h4>
+                    <p>Hotels, motels, and travel facilities</p>
                 </div>
             </div>
         </div>
@@ -1153,21 +883,11 @@
                                 <option value="hotel">Hotel/Motel</option>
                                 <option value="office">Office Building</option>
                                 <option value="healthcare">Healthcare Facility</option>
-                                <option value="school">School/University</option>
+                                <option value="education">School/University</option>
                                 <option value="entertainment">Entertainment Venue</option>
                                 <option value="retail">Retail/Restaurant</option>
                                 <option value="housing">Multi-Unit Housing</option>
                                 <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="facility-size">Facility Size</label>
-                            <select id="facility-size" name="facility-size" required>
-                                <option value="">Select facility size</option>
-                                <option value="small">Small (Under 5,000 sq ft)</option>
-                                <option value="medium">Medium (5,000-20,000 sq ft)</option>
-                                <option value="large">Large (20,000-100,000 sq ft)</option>
-                                <option value="xl">Extra Large (100,000+ sq ft)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -1177,14 +897,13 @@
                                 <option value="emergency">Emergency - Need service today</option>
                                 <option value="urgent">Urgent - Within 2-3 days</option>
                                 <option value="scheduled">Can schedule within a week</option>
-                                <option value="planned">Planning for future treatment</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Tell us about your bed bug situation</label>
-                            <textarea id="message" name="message" placeholder="Please describe the extent of the problem, affected areas, and any specific concerns for your business operations..."></textarea>
+                            <label for="message">Tell us about your situation</label>
+                            <textarea id="message" name="message" placeholder="Describe your bed bug situation, facility size, and any specific concerns..."></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Get Commercial Quote</button>
+                        <button type="submit" class="submit-btn">Request Commercial Quote</button>
                     </form>
                 </div>
             </div>
@@ -1193,106 +912,53 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>CleanSure Commercial</h4>
-                    <p>Professional chemical-free bed bug extermination for businesses across the Greater Philadelphia area.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Commercial Services</h4>
-                    <p><a href="#contact">Hotels & Hospitality</a></p>
-                    <p><a href="#contact">Office Buildings</a></p>
-                    <p><a href="#contact">Healthcare Facilities</a></p>
-                    <p><a href="#contact">Educational Institutions</a></p>
-                <p><a href="/resources">Bed Bug Control Resources</a></p></div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>📞 (267) 225-0086</p>
-                    <p>📧 commercial@bedbugexterminator.services</p>
-                    <p>🏢 Greater Philadelphia Area</p>
-                </div>
-            </div>
-            <p>&copy; 2025 CleanSure. All rights reserved. Licensed and insured commercial bed bug extermination services.</p>
+            <p>&copy; 2025 CleanSure. All rights reserved. | Licensed & Insured | Serving Philadelphia and Southeastern PA</p>
         </div>
     </footer>
 
     <script>
-        // Enhanced tracking for commercial page
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function() {
-                const location = this.closest('section')?.id || 'commercial-page';
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'commercial_phone_call', {
-                        'event_category': 'Commercial Lead Generation',
-                        'event_label': `Phone Click - ${location}`,
-                        'value': 1
-                    });
-                }
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'event_category': 'Commercial',
+                'event_label': 'Commercial Page View'
             });
-        });
-
-        // Track commercial form submissions
-        document.querySelector('form[name="commercial-contact"]')?.addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'commercial_form_submit', {
-                    'event_category': 'Commercial Lead Generation',
-                    'event_label': 'Commercial Quote Form',
-                    'value': 1
-                });
-            }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        }
     </script>
 
+    <!-- NEW UNIFIED NAVIGATION SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
-            // NOTE: I have *removed* the 'phoneLinks' tracking from this script
-            // to avoid conflicting with your 'commercial_phone_call' tracking
-            // in the script block above.
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
             
-            if (hamburger && navLinks) { // Added this check for safety
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                    this.setAttribute('aria-expanded', this.classList.contains('active'));
-                });
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                this.setAttribute('aria-expanded', this.classList.contains('active'));
+            });
             
-                document.addEventListener('click', function(e) {
-                    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
+            document.addEventListener('click', function(e) {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const location = this.closest('nav') ? 'Navigation' : 'Unknown';
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_call', {
+                            'event_category': 'Lead Generation',
+                            'event_label': `Phone Click - ${location}`,
+                            'value': 1
+                        });
                     }
                 });
-
-                // Re-added this logic from your original commercial.html script
-                // to close the menu when a link is clicked.
-                const navItems = navLinks.querySelectorAll('a');
-                navItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                    });
-                });
-            }
+            });
         });
     </script>
-    </body>
+</body>
 </html>
