@@ -19,6 +19,8 @@ https://www.bedbugexterminator.services/* https://bedbugexterminator.services/:s
 /thank-you.html /thank-you 301!
 /bed-bugs-faq.html /bed-bugs-faq 301!
 /preparation-checklist.html /preparation-checklist 301!
+/chemical-free-bed-bug-extermination.html /chemical-free-bed-bug-extermination 301!
+/privacy-policy.html /privacy-policy 301!
 
 # Rewrite clean URLs to serve .html files (200 status = rewrite, not redirect)
 / /index.html 200
@@ -33,8 +35,11 @@ https://www.bedbugexterminator.services/* https://bedbugexterminator.services/:s
 /bed-bugs-faq /bed-bugs-faq.html 200
 /thank-you /thank-you.html 200
 /preparation-checklist /preparation-checklist.html 200
+/chemical-free-bed-bug-extermination /chemical-free-bed-bug-extermination.html 200
+/privacy-policy /privacy-policy.html 200
 
 # SEO-friendly shortcuts
+/privacy /privacy-policy 302
 /inspection /contact 302
 /quote /contact 302
 /emergency /contact 302
