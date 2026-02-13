@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://bedbugexterminator.services/sitemap.xml
+Disallow: /thank-you

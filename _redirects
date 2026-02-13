@@ -6,36 +6,52 @@ http://bedbugexterminator.services/* https://bedbugexterminator.services/:splat 
 http://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
 https://www.bedbugexterminator.services/* https://bedbugexterminator.services/:splat 301!
 
+# 301 redirects from old URLs to new shorter URLs
+/bed-bug-extermination-treatment-options /treatment-options 301!
+/bed-bug-extermination-treatment-options.html /treatment-options 301!
+/chemical-free-bed-bug-extermination /chemical-free-treatment 301!
+/chemical-free-bed-bug-extermination.html /chemical-free-treatment 301!
+/how-to-identify-bed-bugs-infestation /identify-bed-bugs 301!
+/how-to-identify-bed-bugs-infestation.html /identify-bed-bugs 301!
+/what-to-do-when-you-find-bed-bugs /found-bed-bugs 301!
+/what-to-do-when-you-find-bed-bugs.html /found-bed-bugs 301!
+/bed-bug-infestations-philadelphia-suburbs /philadelphia-bed-bugs 301!
+/bed-bug-infestations-philadelphia-suburbs.html /philadelphia-bed-bugs 301!
+/travel-bed-bug-protection-guide /travel-protection 301!
+/travel-bed-bug-protection-guide.html /travel-protection 301!
+/bed-bug-prevention-guide /prevention-guide 301!
+/bed-bug-prevention-guide.html /prevention-guide 301!
+
 # Redirect .html extensions to clean URLs
 /index.html / 301!
 /commercial.html /commercial 301!
 /resources.html /resources 301!
-/bed-bug-prevention-guide.html /bed-bug-prevention-guide 301!
-/bed-bug-extermination-treatment-options.html /bed-bug-extermination-treatment-options 301!
-/how-to-identify-bed-bugs-infestation.html /how-to-identify-bed-bugs-infestation 301!
-/what-to-do-when-you-find-bed-bugs.html /what-to-do-when-you-find-bed-bugs 301!
-/bed-bug-infestations-philadelphia-suburbs.html /bed-bug-infestations-philadelphia-suburbs 301!
-/travel-bed-bug-protection-guide.html /travel-bed-bug-protection-guide 301!
+/treatment-options.html /treatment-options 301!
+/chemical-free-treatment.html /chemical-free-treatment 301!
+/identify-bed-bugs.html /identify-bed-bugs 301!
+/found-bed-bugs.html /found-bed-bugs 301!
+/philadelphia-bed-bugs.html /philadelphia-bed-bugs 301!
+/travel-protection.html /travel-protection 301!
+/prevention-guide.html /prevention-guide 301!
 /thank-you.html /thank-you 301!
 /bed-bugs-faq.html /bed-bugs-faq 301!
 /preparation-checklist.html /preparation-checklist 301!
-/chemical-free-bed-bug-extermination.html /chemical-free-bed-bug-extermination 301!
 /privacy-policy.html /privacy-policy 301!
 
 # Rewrite clean URLs to serve .html files (200 status = rewrite, not redirect)
 / /index.html 200
 /commercial /commercial.html 200
 /resources /resources.html 200
-/bed-bug-prevention-guide /bed-bug-prevention-guide.html 200
-/bed-bug-extermination-treatment-options /bed-bug-extermination-treatment-options.html 200
-/how-to-identify-bed-bugs-infestation /how-to-identify-bed-bugs-infestation.html 200
-/what-to-do-when-you-find-bed-bugs /what-to-do-when-you-find-bed-bugs.html 200
-/bed-bug-infestations-philadelphia-suburbs /bed-bug-infestations-philadelphia-suburbs.html 200
-/travel-bed-bug-protection-guide /travel-bed-bug-protection-guide.html 200
+/treatment-options /treatment-options.html 200
+/chemical-free-treatment /chemical-free-treatment.html 200
+/identify-bed-bugs /identify-bed-bugs.html 200
+/found-bed-bugs /found-bed-bugs.html 200
+/philadelphia-bed-bugs /philadelphia-bed-bugs.html 200
+/travel-protection /travel-protection.html 200
+/prevention-guide /prevention-guide.html 200
 /bed-bugs-faq /bed-bugs-faq.html 200
 /thank-you /thank-you.html 200
 /preparation-checklist /preparation-checklist.html 200
-/chemical-free-bed-bug-extermination /chemical-free-bed-bug-extermination.html 200
 /privacy-policy /privacy-policy.html 200
 
 # SEO-friendly shortcuts
