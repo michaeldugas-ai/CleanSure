@@ -1,5 +1,14 @@
-User-agent: *
-Allow: /
-Sitemap: https://bedbugexterminator.services/sitemap.xml
-Disallow: /thank-you
-Disallow: /alt/
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
+{\colortbl;\red255\green255\blue255;\red229\green231\blue236;}
+{\*\expandedcolortbl;;\cssrgb\c91765\c92549\c94118;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 User-agent: *\
+Allow: /\
+Sitemap: https://bedbugexterminator.services/sitemap.xml\
+Disallow: /thank-you\
+}
