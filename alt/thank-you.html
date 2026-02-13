@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/./images/cleansure-favicon-transparent.png">
+    <link rel="icon" href="/./images/cleansure-favicon-transparent.png" type="image/png">
+    <title>Thank You - CleanSure Bed Bug Extermination</title>
+    <meta name="description" content="Thank you for contacting CleanSure. We'll call you back within 1 hour to schedule your free bed bug inspection.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VM702HH2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4VM702HH2J');
+
+        // Conversion tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'event_category': 'Lead Generation',
+                'event_label': 'Form Submission',
+                'value': 1
+            });
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2d5016;
+            --secondary: #4a7c59;
+            --accent: #f59e0b;
+            --dark: #1f3a0f;
+            --light: #f0f9f4;
+            --gray: #6b7280;
+            --light-gray: #f8fafc;
+            --white: #ffffff;
+            --black: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--black); background: var(--light-gray); }
+        h1,h2,h3,h4,h5,h6 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; line-height: 1.2; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        a { color: var(--primary); }
+
+        /* HEADER: Logo + Phone only */
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav.container { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; }
+        .logo { height: 55px; width: auto; max-width: 220px; }
+        .nav-cta { background: var(--primary); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: background 0.3s; white-space: nowrap; }
+        .nav-cta:hover { background: var(--dark); }
+        .nav-cta-mobile { display: none; }
+        @media(max-width:768px) {
+            .nav-cta { display: none; }
+            .nav-cta-mobile { display: flex; align-items: center; justify-content: center; background: var(--primary); color: var(--white); width: 44px; height: 44px; border-radius: 50%; text-decoration: none; }
+            .nav-cta-mobile svg { fill: var(--white); width: 22px; height: 22px; }
+        }
+
+        /* MAIN CONTENT AREA */
+        main { padding: 3rem 0 2rem; }
+
+        /* SUCCESS HERO */
+        .success-hero { text-align: center; padding: 3rem 0 2rem; }
+        .checkmark-circle {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+        .checkmark-circle svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--white);
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .checkmark-circle svg .checkmark-path {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            animation: drawCheck 0.4s 0.3s ease-out forwards;
+        }
+        @keyframes drawCheck {
+            to { stroke-dashoffset: 0; }
+        }
+        .success-hero h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .success-hero h1 span { color: var(--accent); }
+        .success-hero .subtitle { font-size: 1.2rem; color: var(--gray); max-width: 550px; margin: 0 auto; }
+        .success-hero .subtitle a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .success-hero .subtitle a:hover { text-decoration: underline; }
+        @media(max-width:768px) {
+            .success-hero { padding: 2rem 0 1.5rem; }
+            .success-hero h1 { font-size: 2rem; }
+            .checkmark-circle { width: 76px; height: 76px; }
+            .checkmark-circle svg { width: 38px; height: 38px; }
+        }
+
+        /* CONTENT CARDS */
+        .card { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+
+        /* WHAT TO EXPECT */
+        .expect-card { max-width: 700px; margin-left: auto; margin-right: auto; }
+        .expect-card h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem; text-align: center; }
+        .expect-steps { list-style: none; padding: 0; }
+        .expect-steps li { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+        .expect-steps li:last-child { margin-bottom: 0; }
+        .step-num { background: var(--primary); color: var(--white); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+        .step-text h4 { color: var(--black); font-size: 1.05rem; margin-bottom: 0.15rem; }
+        .step-text p { color: var(--gray); font-size: 0.95rem; margin: 0; }
+
+        /* REFERRAL CTA */
+        .referral-card {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: var(--white);
+            text-align: center;
+            border-radius: 12px;
+            padding: 2rem 2rem 1.75rem;
+        }
+        .referral-card h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--white); }
+        .referral-card p { opacity: 0.9; font-size: 1rem; margin-bottom: 1rem; }
+        .referral-phone {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s;
+        }
+        .referral-phone:hover { background: #e08e00; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
+        .referral-subtext { font-size: 0.85rem; opacity: 0.7; margin-top: 0.75rem; }
+
+        /* PREPARATION TEASER */
+        .prep-card {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: var(--light);
+            border: 2px solid var(--secondary);
+            text-align: center;
+        }
+        .prep-card h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .prep-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 1rem; }
+        .prep-link {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .prep-link:hover { background: var(--primary); color: var(--white); }
+
+        /* RESOURCES */
+        .resources-section { max-width: 700px; margin-left: auto; margin-right: auto; }
+        .resources-section h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 1.25rem; text-align: center; }
+        .resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .resource-item {
+            background: var(--light-gray);
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--black);
+            transition: all 0.3s;
+        }
+        .resource-item:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .resource-icon { font-size: 1.75rem; margin-bottom: 0.5rem; display: block; }
+        .resource-item h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 0.25rem; line-height: 1.3; }
+        .resource-item p { font-size: 0.8rem; color: var(--gray); margin: 0; }
+        @media(max-width:600px) {
+            .resource-grid { grid-template-columns: 1fr; }
+        }
+
+        /* FOOTER */
+        footer { background: #111827; color: var(--white); text-align: center; padding: 2rem 0; margin-top: 1rem; }
+        footer p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+        footer p:last-child { margin-bottom: 0; }
+        footer a { color: #d1d5db; text-decoration: none; }
+        footer a:hover { color: var(--accent); }
+    </style>
+
+    <!-- WebPage Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Thank You - CleanSure Bed Bug Extermination",
+      "description": "Thank you for contacting CleanSure. We'll call you back within 1 hour to schedule your free bed bug inspection.",
+      "url": "https://bedbugexterminator.services/alt/thank-you",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CleanSure Bed Bug Extermination",
+        "url": "https://bedbugexterminator.services"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bed Bug Extermination Service Confirmation"
+      },
+      "provider": {
+        "@type": "PestControlService",
+        "name": "CleanSure",
+        "telephone": "+1-267-225-0086",
+        "url": "https://bedbugexterminator.services"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- HEADER: Logo + Phone only -->
+    <header>
+        <nav class="container">
+            <a href="/"><img src="/./images/cleansure-logo-400.png" alt="CleanSure" class="logo" width="220" height="55"></a>
+            <a href="tel:2672250086" class="nav-cta">Call (267) 225-0086</a>
+            <a href="tel:2672250086" class="nav-cta-mobile" aria-label="Call CleanSure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- 1. SUCCESS HERO: Checkmark + Headline -->
+            <section class="success-hero">
+                <div class="checkmark-circle">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <polyline class="checkmark-path" points="4 12 10 18 20 6"></polyline>
+                    </svg>
+                </div>
+                <h1>Thank You! <span>We're On It.</span></h1>
+                <p class="subtitle">We'll call you back within 1 hour during business hours. For emergencies, call <a href="tel:2672250086">(267) 225-0086</a> now.</p>
+            </section>
+
+            <!-- 2. WHAT TO EXPECT NEXT: Numbered Steps -->
+            <div class="card expect-card">
+                <h2>What Happens Next</h2>
+                <ol class="expect-steps">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            <h4>We Call to Schedule Your Free Inspection</h4>
+                            <p>A CleanSure specialist will reach out to discuss your situation and find a time that works for you.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            <h4>A Certified Technician Assesses Your Home</h4>
+                            <p>We conduct a thorough inspection to determine the scope of the infestation and the best treatment plan.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div class="step-text">
+                            <h4>We Provide a Transparent, No-Obligation Quote</h4>
+                            <p>You get upfront pricing with no hidden fees. Approve it only if you're completely comfortable.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- 3. REFERRAL CTA -->
+            <div class="referral-card card">
+                <h2>Know Someone Else Dealing with Bed Bugs?</h2>
+                <p>Help a friend, family member, or neighbor get relief. Share our number and they can get the same fast, guaranteed service.</p>
+                <a href="tel:2672250086" class="referral-phone">Share: (267) 225-0086</a>
+                <p class="referral-subtext">Every referral helps us keep serving the Philadelphia community.</p>
+            </div>
+
+            <!-- 4. PREPARATION TEASER -->
+            <div class="card prep-card">
+                <h3>Want to Get a Head Start?</h3>
+                <p>While you wait for our call, check out our treatment preparation guide so you know exactly what to expect.</p>
+                <a href="/preparation-checklist" class="prep-link">View Preparation Checklist</a>
+            </div>
+
+            <!-- 5. RESOURCES -->
+            <div class="card resources-section">
+                <h3>Helpful Resources</h3>
+                <div class="resource-grid">
+                    <a href="/bed-bug-prevention-guide" class="resource-item">
+                        <span class="resource-icon" aria-hidden="true">&#128736;</span>
+                        <h4>Prevention Guide</h4>
+                        <p>Keep bed bugs from coming back</p>
+                    </a>
+                    <a href="/chemical-free-bed-bug-extermination" class="resource-item">
+                        <span class="resource-icon" aria-hidden="true">&#9752;</span>
+                        <h4>Chemical-Free Treatment</h4>
+                        <p>How our heat treatment works</p>
+                    </a>
+                    <a href="/bed-bugs-faq" class="resource-item">
+                        <span class="resource-icon" aria-hidden="true">&#10067;</span>
+                        <h4>Bed Bugs FAQ</h4>
+                        <p>Answers to common questions</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CleanSure. All rights reserved. Licensed and insured. Serving Philadelphia &amp; Southeastern PA.</p>
+            <p><a href="/privacy-policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Track phone clicks with location context
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var location = 'unknown';
+                if (this.closest('nav')) location = 'header';
+                else if (this.closest('.success-hero')) location = 'emergency-cta';
+                else if (this.closest('.referral-card')) location = 'referral';
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'Lead Generation',
+                        'event_label': 'Thank You - Phone Click - ' + location,
+                        'value': 1
+                    });
+                }
+            });
+        });
+
+        // Track referral CTA click specifically
+        var referralBtn = document.querySelector('.referral-phone');
+        if (referralBtn) {
+            referralBtn.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'referral_cta_click', {
+                        'event_category': 'Referral',
+                        'event_label': 'Thank You Page Referral Phone Click',
+                        'value': 1
+                    });
+                }
+            });
+        }
+
+        // Track resource link clicks
+        document.querySelectorAll('.resource-item').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'resource_click', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Thank You - ' + this.querySelector('h4').textContent,
+                        'value': 1
+                    });
+                }
+            });
+        });
+
+        // Track preparation checklist click
+        var prepLink = document.querySelector('.prep-link');
+        if (prepLink) {
+            prepLink.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'prep_checklist_click', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Thank You - Preparation Checklist',
+                        'value': 1
+                    });
+                }
+            });
+        }
+
+        // Track time on thank-you page
+        var startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            var timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'thank_you_engagement', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Time on Thank You Page',
+                    'value': timeOnPage
+                });
+            }
+        });
+    </script>
+</body>
+</html>
