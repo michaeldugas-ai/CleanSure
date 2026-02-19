@@ -1,0 +1,269 @@
+# Netlify configuration for CleanSure website
+
+[build]
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+# Form handling configuration
+[[forms]]
+  name = "contact"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com"
+
+# Cache static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Force HTTPS and remove www
+[[redirects]]
+  from = "http://bedbugexterminator.services/*"
+  to = "https://bedbugexterminator.services/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.bedbugexterminator.services/*"
+  to = "https://bedbugexterminator.services/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.bedbugexterminator.services/*"
+  to = "https://bedbugexterminator.services/:splat"
+  status = 301
+  force = true
+
+# Redirect .html extensions to clean URLs
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial.html"
+  to = "/commercial"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources.html"
+  to = "/resources"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bed-bugs-faq.html"
+  to = "/bed-bugs-faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/chemical-free-treatment.html"
+  to = "/chemical-free-treatment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/found-bed-bugs.html"
+  to = "/found-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/identify-bed-bugs.html"
+  to = "/identify-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/treatment-options.html"
+  to = "/treatment-options"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/philadelphia-bed-bugs.html"
+  to = "/philadelphia-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/travel-protection.html"
+  to = "/travel-protection"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/prevention-guide.html"
+  to = "/prevention-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/preparation-checklist.html"
+  to = "/preparation-checklist"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+# 301 redirects from old long URLs to new shorter URLs
+[[redirects]]
+  from = "/bed-bug-prevention-guide"
+  to = "/prevention-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bed-bug-extermination-treatment-options"
+  to = "/treatment-options"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/chemical-free-bed-bug-extermination"
+  to = "/chemical-free-treatment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-identify-bed-bugs-infestation"
+  to = "/identify-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/what-to-do-when-you-find-bed-bugs"
+  to = "/found-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bed-bug-infestations-philadelphia-suburbs"
+  to = "/philadelphia-bed-bugs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/travel-bed-bug-protection-guide"
+  to = "/travel-protection"
+  status = 301
+  force = true
+
+# Rewrite clean URLs to serve .html files
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/commercial"
+  to = "/commercial.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources"
+  to = "/resources.html"
+  status = 200
+
+[[redirects]]
+  from = "/prevention-guide"
+  to = "/prevention-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/chemical-free-treatment"
+  to = "/chemical-free-treatment.html"
+  status = 200
+
+[[redirects]]
+  from = "/identify-bed-bugs"
+  to = "/identify-bed-bugs.html"
+  status = 200
+
+[[redirects]]
+  from = "/found-bed-bugs"
+  to = "/found-bed-bugs.html"
+  status = 200
+
+[[redirects]]
+  from = "/philadelphia-bed-bugs"
+  to = "/philadelphia-bed-bugs.html"
+  status = 200
+
+[[redirects]]
+  from = "/travel-protection"
+  to = "/travel-protection.html"
+  status = 200
+
+[[redirects]]
+  from = "/bed-bugs-faq"
+  to = "/bed-bugs-faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/preparation-checklist"
+  to = "/preparation-checklist.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+# SEO shortcuts
+[[redirects]]
+  from = "/inspection"
+  to = "/contact"
+  status = 302
+
+[[redirects]]
+  from = "/quote"
+  to = "/contact"
+  status = 302
+
+[[redirects]]
+  from = "/emergency"
+  to = "/contact"
+  status = 302
+
+[[redirects]]
+  from = "/commercial-quote"
+  to = "/commercial#contact"
+  status = 302
