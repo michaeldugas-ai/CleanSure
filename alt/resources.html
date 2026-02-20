@@ -263,27 +263,32 @@
         /* Footer */
         footer {
             background: #111827;
-            color: #d1d5db;
+            color: white;
             text-align: center;
-            padding: 1.5rem 2rem;
-            font-size: 0.9rem;
+            padding: 2rem 0;
         }
 
-        footer a {
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #f59e0b;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .footer-section p, .footer-section a {
             color: #d1d5db;
             text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        footer a:hover {
-            color: var(--accent);
-        }
-
-        footer .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 0.5rem;
+        .footer-section a:hover {
+            color: #f59e0b;
         }
 
         /* Sticky Mobile CTA */
@@ -461,14 +466,29 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 CleanSure. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/privacy-policy">Privacy Policy</a>
-                <a href="/alt/resources">Resources</a>
-                <a href="/commercial">Commercial</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CleanSure</h4>
+                    <p>Chemical-free bed bug extermination specialists serving Mount Airy, Chestnut Hill, Northwest Philadelphia,Montgomery County, Delaware County, Lower Bucks County</br><a href="/bed-bugs-faq"><b>CleanSure Bed Bug FAQs</b></a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p><a href="/index.html#services">Heat Treatment</a></p>
+                    <p><a href="/index.html#contact">Free Inspection</a></p>
+                    <p><a href="/commercial">Commercial Services</a></p>
+                    <p><a href="/resources">Bed Bug Control Resources</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞Text or Call (267) 225-0086</p>
+                    <p>📧 Info@BedBugExterminator.Services</p>
+                    <p>🏠 Mount Airy, Chestnut Hill, Northwest Philadelphia, Montgomery County, Delaware County, Lower Bucks County</p>
+                </div>
             </div>
+            <p>&copy; 2026 CleanSure. All rights reserved. Licensed and insured bed bug extermination services. | <a href="/privacy-policy" style="color: #d1d5db;">Privacy Policy</a></p>
         </div>
     </footer>
 
