@@ -433,38 +433,36 @@
             letter-spacing: 1px;
         }
 
-        .compare-row {
-            display: flex;
-            justify-content: space-between;
+        /* Three-column grid: label | heat value | chemical value */
+        .compare-table {
+            display: grid;
+            grid-template-columns: 1fr 7.5rem 7.5rem;
             align-items: center;
-            padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.07);
-            font-size: 0.88rem;
-            gap: 0.5rem;
         }
-        .compare-row:last-child { border-bottom: none; }
-        .compare-label { color: var(--gray); flex-shrink: 0; }
-        .compare-vals {
-            display: flex;
-            gap: 1rem;
-            flex-shrink: 0;
-        }
-        .compare-vals .heat { color: #16a34a; font-weight: 700; }
-        .compare-vals .chem { color: #dc2626; }
-        .compare-header-row {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-            padding-bottom: 0.5rem;
-            font-size: 0.75rem;
+        .compare-th {
+            font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: var(--gray);
-            margin-bottom: 0.25rem;
+            padding: 0 0.5rem 0.6rem;
+            text-align: center;
         }
-        .compare-header-row .heat { color: var(--primary); }
-        .compare-header-row .chem { color: var(--gray); }
+        .compare-th:first-child { text-align: left; padding-left: 0; }
+        .compare-th.heat { color: var(--primary); }
+        .compare-th.chem { color: var(--gray); }
+        .compare-td {
+            padding: 0.65rem 0.5rem;
+            font-size: 0.88rem;
+            border-top: 1px solid rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        .compare-td.label {
+            color: var(--gray);
+            text-align: left;
+            padding-left: 0;
+        }
+        .compare-td.heat { color: #16a34a; font-weight: 700; }
+        .compare-td.chem { color: #dc2626; }
 
         /* ─── HOW IT WORKS ───────────────────────────────────────────── */
         #how-it-works {
@@ -1053,51 +1051,35 @@
             <!-- Heat vs. Chemical comparison -->
             <div class="compare-card">
                 <h4>Heat vs. Chemical: The Real Cost</h4>
-                <div class="compare-header-row">
-                    <span class="heat">Heat (CleanSure)</span>
-                    <span class="chem">Chemical Spray</span>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Treatments needed</span>
-                    <div class="compare-vals">
-                        <span class="heat">1</span>
-                        <span class="chem">3–5+</span>
-                    </div>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Treatment days</span>
-                    <div class="compare-vals">
-                        <span class="heat">1</span>
-                        <span class="chem">Weeks–months</span>
-                    </div>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Chemical exposure</span>
-                    <div class="compare-vals">
-                        <span class="heat">None</span>
-                        <span class="chem">Yes</span>
-                    </div>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Eggs killed</span>
-                    <div class="compare-vals">
-                        <span class="heat">Yes</span>
-                        <span class="chem">Often no</span>
-                    </div>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Guaranteed result</span>
-                    <div class="compare-vals">
-                        <span class="heat">Yes</span>
-                        <span class="chem">Rarely</span>
-                    </div>
-                </div>
-                <div class="compare-row">
-                    <span class="compare-label">Peace of mind</span>
-                    <div class="compare-vals">
-                        <span class="heat">Day one</span>
-                        <span class="chem">Uncertain</span>
-                    </div>
+                <div class="compare-table">
+                    <!-- Column headers -->
+                    <div class="compare-th"></div>
+                    <div class="compare-th heat">Heat (CleanSure)</div>
+                    <div class="compare-th chem">Chemical Spray</div>
+                    <!-- Rows -->
+                    <div class="compare-td label">Treatments needed</div>
+                    <div class="compare-td heat">1</div>
+                    <div class="compare-td chem">3–5+</div>
+
+                    <div class="compare-td label">Treatment days</div>
+                    <div class="compare-td heat">1</div>
+                    <div class="compare-td chem">Weeks–months</div>
+
+                    <div class="compare-td label">Chemical exposure</div>
+                    <div class="compare-td heat">None</div>
+                    <div class="compare-td chem">Yes</div>
+
+                    <div class="compare-td label">Eggs killed</div>
+                    <div class="compare-td heat">Yes</div>
+                    <div class="compare-td chem">Often no</div>
+
+                    <div class="compare-td label">Guaranteed result</div>
+                    <div class="compare-td heat">Yes</div>
+                    <div class="compare-td chem">Rarely</div>
+
+                    <div class="compare-td label">Peace of mind</div>
+                    <div class="compare-td heat">Day one</div>
+                    <div class="compare-td chem">Uncertain</div>
                 </div>
                 <p style="font-size:0.78rem;color:var(--gray);margin-top:1rem;font-style:italic;">
                     "Buy once, cry once." — Actual CleanSure customer
